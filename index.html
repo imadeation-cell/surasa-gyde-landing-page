@@ -17,7 +17,15 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
         
-        .hero { height: 85vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914') center/cover; display: flex; align-items: center; padding: 0 10%; }
+        .hero { 
+            height: 85vh; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+            /* NEW HERO IMAGE APPLIED BELOW */
+            url('https://i.ibb.co/qFCpyPp1/IMG-2733-1.jpg') center/cover; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 10%; 
+        }
         .hero h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.1; margin: 20px 0; }
         .badge { background: rgba(214, 178, 94, 0.15); color: var(--gold); padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; border: 1px solid var(--gold); display: inline-block; }
         
@@ -122,7 +130,7 @@
         <form id="leadForm">
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="tel" name="phone" placeholder="Phone Number (Digits only)" pattern="[0-9]{10,15}" title="Please enter 10-15 digits only" required>
             <button type="submit" class="btn primary" style="width: 100%; margin-top: 10px;">Submit Application</button>
         </form>
     </div>
@@ -141,14 +149,22 @@
     
     document.getElementById("leadForm").addEventListener("submit", function(e) {
         e.preventDefault();
+        
+        const phone = this.phone.value;
+        if (!/^[0-9]+$/.test(phone)) {
+            alert("Please enter a valid phone number containing only digits.");
+            return;
+        }
+
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyaFIHcDitv5YgvhC4dkgJFySrJoNGUUhQajo7ipfu_dzhS3eAV_tYMOjMn2Aa7N5vi/exec';
+        
         fetch(scriptURL, {
             method: 'POST',
             mode: 'no-cors',
             body: JSON.stringify({
                 name: this.name.value,
                 email: this.email.value,
-                phone: this.phone.value
+                phone: phone
             })
         }).then(() => {
             alert("Application submitted successfully!");
