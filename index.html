@@ -185,13 +185,18 @@
     <button class="btn primary" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now</button>
 </div>
 <script>
+    function toggle(el) {
+        const ans = el.querySelector('.answer');
+        ans.style.display = (ans.style.display === 'block') ? 'none' : 'block';
+    }
+
     document.getElementById("leadForm").addEventListener("submit", async function(e) {
         e.preventDefault();
         const btn = this.querySelector('button');
-        btn.disabled = true; // Prevents duplicate clicks
+        btn.disabled = true;
         btn.textContent = "Submitting...";
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwuHFKsC7T3ny_j1KatZd_X2bnpT0NM835_o3y25QyhK2aPYSYB6IIkGpShrsN1Eruh/exec'; // <-- PASTE URL HERE
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwf8unPQzgnctEs_wp_RpAnQG4UZ90pvcqC4lHGbwli-D0pXoF8UH8yTmJbE1HrKYz3/exec';
 
         try {
             const response = await fetch(scriptURL, {
@@ -211,7 +216,7 @@
                 alert(result.message);
             }
         } catch (error) {
-            alert("Submission failed. Please check your internet connection.");
+            alert("Email Already Exists");
         } finally {
             btn.disabled = false;
             btn.textContent = "Submit Application";
