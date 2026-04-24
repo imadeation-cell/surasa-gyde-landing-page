@@ -280,39 +280,42 @@
         </form>
     </div>
 </section>
+<!-- SCRIPT -->
 <script>
+function scrollToForm() {
+    document.getElementById("apply").scrollIntoView({behavior: "smooth"});
+}
+
 document.getElementById("leadForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
     const form = this;
-    const btn = form.querySelector('button');
+    const btn = form.querySelector("button");
 
-    // Prevent double click instantly
     if (btn.disabled) return;
 
     btn.disabled = true;
     btn.textContent = "Submitting...";
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwFGAhRbOIfuxEZCNGGOnt59tsAjiG8wdcRsBsg7gzJ8F23-RJmFn7s_Xb71v8G98nB/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyZPqtBiCvfiqGzjYrSj1azwc6V3OT9JK8Kn-M0qAobeRYgyiBGMNOcgRvUE6OZZN9L/exec";
 
     try {
-        const response = await fetch(scriptURL, {
+        await fetch(scriptURL, {
             method: "POST",
             mode: "no-cors",
             body: new FormData(form)
         });
 
-        alert("✅ Submission successful!");
+        alert("✅ Submitted successfully!");
         form.reset();
 
     } catch (error) {
-        alert("❌ Something went wrong. Please try again.");
+        alert("❌ Error! Try again.");
     } finally {
         btn.disabled = false;
         btn.textContent = "Submit Application";
     }
 });
-</script>
 
 </body>
 </html>
