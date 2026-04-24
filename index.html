@@ -140,38 +140,30 @@
     <span style="font-size: 14px;">Ready to excel?</span>
     <button class="btn primary" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now</button>
 </div>
-
-<script>
-    function toggle(el) {
-        const ans = el.querySelector('.answer');
-        ans.style.display = (ans.style.display === 'block') ? 'none' : 'block';
-    }
+<script>document.getElementById("leadForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    btn.disabled = true; // Prevent double clicks
     
-    document.getElementById("leadForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        
-        const phone = this.phone.value;
-        if (!/^[0-9]+$/.test(phone)) {
-            alert("Please enter a valid phone number containing only digits.");
-            return;
-        }
-
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyuUAubXSiZAFiQjwcu7weBhdLp1PmHK4LEMTyc54Gf0fvJY0QsRJQbAJ8zVSoXWbOr/exec';
-        
-        fetch(scriptURL, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: JSON.stringify({
-                name: this.name.value,
-                email: this.email.value,
-                phone: phone
-            })
-        }).then(() => {
-            alert("Application submitted successfully!");
-            this.reset();
-        }).catch(error => console.error('Error!', error.message));
-    });
-</script>
+    const scriptURL = 'YOUR_NEW_DEPLOYMENT_URL_HERE';
+    
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors', // Note: no-cors limits reading the response body. 
+        // If you need to detect the "error" message, you must use a Library like 'cors-anywhere' 
+        // or ensure your Apps Script is set to 'Anyone' access and handle the CORS response.
+        body: JSON.stringify({
+            name: this.name.value,
+            email: this.email.value,
+            phone: this.phone.value
+        })
+    }).then(() => {
+        alert("Application submitted successfully!");
+        this.reset();
+    }).catch(error => {
+        alert("Error occurred. Please try again.");
+    }).finally(() => btn.disabled = false);
+});</script>
 
 </body>
 </html>
