@@ -280,62 +280,38 @@
         </form>
     </div>
 </section>
-
 <script>
 document.getElementById("leadForm").addEventListener("submit", async function(e) {
     e.preventDefault();
-    
+
     const form = this;
     const btn = form.querySelector('button');
 
-// Inside your <script> tag, update the try block:
-try {
-    const response = await fetch(scriptURL, {
-        method: 'POST',
-        body: JSON.stringify({
-            name: this.name.value,
-            email: this.email.value,
-            phone: this.phone.value
-        })
-    });
-    const result = await response.json();
-    
-    // Now you handle the specific "error" or "success" status from the script
-    alert(result.message); 
-    if (result.status === "success") this.reset();
+    // Prevent double click instantly
+    if (btn.disabled) return;
 
-} catch (error) {
-    alert("An unexpected error occurred. Please try again.");
-}
-    
-    // 1. Prevent multiple clicks immediately
-    if (btn.disabled) return; 
-    
     btn.disabled = true;
-    btn.textContent = "Submitting..."; // User feedback
-    
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwFGAhRbOIfuxEZCNGGOnt59tsAjiG8wdcRsBsg7gzJ8F23-RJmFn7s_Xb71v8G98nB/exec'; 
+    btn.textContent = "Submitting...";
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwFGAhRbOIfuxEZCNGGOnt59tsAjiG8wdcRsBsg7gzJ8F23-RJmFn7s_Xb71v8G98nB/exec";
 
     try {
         const response = await fetch(scriptURL, {
-            method: 'POST',
-            mode: 'no-cors', // Often required for Google Apps Script
-            body: new FormData(form) // Send as FormData for Google Sheets compatibility
+            method: "POST",
+            mode: "no-cors",
+            body: new FormData(form)
         });
-        
-        alert("Submission successful!");
+
+        alert("✅ Submission successful!");
         form.reset();
+
     } catch (error) {
-        alert("Something went wrong. Please try again.");
+        alert("❌ Something went wrong. Please try again.");
     } finally {
         btn.disabled = false;
-        btn.textContent = "Submit";
+        btn.textContent = "Submit Application";
     }
-});</script>
-
-</body>
-</html>
-    });
+});
 </script>
 
 </body>
