@@ -281,41 +281,42 @@
     </div>
 </section>
 <!-- SCRIPT -->
-<script>
-function scrollToForm() {
-    document.getElementById("apply").scrollIntoView({behavior: "smooth"});
-}
 
+       
+<script>
 document.getElementById("leadForm").addEventListener("submit", async function(e) {
     e.preventDefault();
-
     const form = this;
     const btn = form.querySelector("button");
-
-    if (btn.disabled) return;
-
     btn.disabled = true;
     btn.textContent = "Submitting...";
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyZPqtBiCvfiqGzjYrSj1azwc6V3OT9JK8Kn-M0qAobeRYgyiBGMNOcgRvUE6OZZN9L/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwR6sWORn2zx8T99Zs75iaPc4KJNmqMEHyW9ub2vOUMK68bxQQHE25hSGKrl1pRxQJH/exec"; 
+    const formData = new URLSearchParams(new FormData(form));
 
     try {
-        await fetch(scriptURL, {
+        const response = await fetch(scriptURL, {
             method: "POST",
-            mode: "no-cors",
-            body: new FormData(form)
+            body: formData
         });
-
-        alert("✅ Submitted successfully!");
-        form.reset();
-
+        
+        const result = await response.text();
+        
+        if (result === "Duplicate") {
+            alert("⚠️ This email is already registered.");
+        } else {
+            alert("✅ Submitted successfully!");
+            form.reset();
+        }
     } catch (error) {
-        alert("❌ Error! Try again.");
+        // Silent
     } finally {
         btn.disabled = false;
         btn.textContent = "Submit Application";
     }
 });
+</script>
+
 
 </body>
 </html>
