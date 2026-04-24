@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,15 +16,24 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* EDGE-TO-EDGE STICKY LOGO */
+        .header-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            padding: 15px 20px;
+            border-bottom-right-radius: 15px;
+        }
+        .header-logo img { height: auto; width: auto; display: inline; }
         
         .hero { 
             height: 85vh; 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-            /* NEW HERO IMAGE APPLIED BELOW */
             url('https://i.ibb.co/qFCpyPp1/IMG-2733-1.jpg') center/cover; 
-            display: flex; 
-            align-items: center; 
-            padding: 0 10%; 
+            display: flex; align-items: center; padding: 0 10%; 
         }
         .hero h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.1; margin: 20px 0; }
         .badge { background: rgba(214, 178, 94, 0.15); color: var(--gold); padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; border: 1px solid var(--gold); display: inline-block; }
@@ -38,23 +44,22 @@
         
         .section { padding: 80px 10%; max-width: 1200px; margin: auto; }
         h2 { font-size: 36px; margin-bottom: 40px; }
-        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
         .card { background: var(--card); padding: 30px; border-radius: 16px; border: 1px solid var(--border); transition: 0.3s; }
         .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        
         .step { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
         .circle { width: 40px; height: 40px; background: var(--gold); color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
-        
         .answer { display: none; padding: 15px 0; color: var(--muted); }
-        
         .form-container { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border); max-width: 500px; margin: auto; }
         input { width: 100%; padding: 14px; margin: 10px 0; border-radius: 8px; border: 1px solid var(--border); background: #000; color: #fff; }
-        
         .sticky { position: fixed; bottom: 20px; width: 90%; max-width: 500px; left: 50%; transform: translateX(-50%); background: rgba(18, 18, 20, 0.95); backdrop-filter: blur(10px); padding: 15px 25px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 100; }
     </style>
 </head>
 <body>
+
+<div class="header-logo">
+    <a href="#"><img src="https://i.ibb.co/FbtzXhf4/Untitled-design-16.png" alt="Suraasa TDC Logo"></a>
+</div>
 
 <section class="hero">
     <div>
@@ -62,6 +67,39 @@
         <h1>Suraasa Teacher<br><span style="color:var(--gold)">Development Centre</span></h1>
         <p style="font-size: 18px; color: var(--muted); margin-bottom: 30px;">Elevate your career at Kunskapsskolan Gurgaon.</p>
         <button class="btn primary" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+    </div>
+</section>
+
+
+<section class="section" style="background: var(--card);">
+    <h2>About Gyde and Kunskapsskolan Gurgaon</h2>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
+        
+        <div>
+            <p style="color: var(--muted); margin-bottom: 20px;">
+                Gyandarshan Eduventures (Gyde) has been reimagining K-12 education in India since 2010. 
+                In 2012, Gyde brought Sweden's Kunskapsskolan model to India through a joint venture with Kunskapsskolan AB, 
+                making this Gurgaon campus the first in India to run the KED Program. The model is built on personalized learning, 
+                individual goal-setting, and teachers who coach rather than instruct. Kunskapsskolan Gurgaon is the venue partner 
+                for the Suraasa Teacher Development Center hosted by Gyde.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px;">
+                <div><small style="color: var(--gold)">Location</small><p>Sector 28, Gurugram, India</p></div>
+                <div><small style="color: var(--gold)">Established</small><p>2013</p></div>
+                <div><small style="color: var(--gold)">Board Affiliation</small><p>CBSE, IB</p></div>
+                <div><small style="color: var(--gold)">Grade Levels</small><p>K-12</p></div>
+            </div>
+        </div>
+
+        <div style="text-align: center; background: #fff; padding: 30px; border-radius: 16px;">
+            <p style="color: #000; margin-bottom: 15px; font-size: 14px; font-weight: 600;">
+            <a href="https://ibb.co/PZ4Mtxf3">
+                <img src="https://i.ibb.co/PZ4Mtxf3/Whats-App-Image-2026-04-06-at-5-23-23-PM-1.jpg" 
+                     alt="Partnership Logo" 
+                     style="max-width: 150px; height: auto;">
+            </a>
+        </div>
     </div>
 </section>
 
@@ -117,6 +155,7 @@
     </div>
 </section>
 
+
 <section class="section" style="padding-top: 0;">
     <div style="background: var(--card); border: 1px solid var(--gold); padding: 30px; border-radius: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
         <div style="display: flex; align-items: center; gap: 20px;">
@@ -137,6 +176,8 @@
             <button type="submit" class="btn primary" style="width: 100%; margin-top: 10px;">Submit Application</button>
         </form>
     </div>
+
+
 </section>
 
 <div class="sticky">
