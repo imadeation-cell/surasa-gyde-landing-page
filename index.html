@@ -1,875 +1,1526 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraasa TDC | Professional Teacher Development</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #050505;
-            --card: #121214;
-            --gold: #d6b25e;
-            --text: #ffffff;
-            --muted: #87909e;
-            --border: #e5e7ea20;
-            --primary-font: 'Inter', sans-serif;
-        }
+<html lang="en"><head>
+  <title>Teacher Training &amp; Development Centre at Kunskapsskolan Gurgaon (Sec-28)</title>
+		<meta name="description" content="Upgrade your teaching career with international qualifications at the Suraasa Teacher Development Centre hosted by Gyde at Kunskapsskolan Gurgaon.">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: var(--primary-font); 
-            background: var(--bg); 
-            color: var(--text); 
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* TDC BANNER MAIN STYLE */
-        .tdc-banner {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            /* Using the Desktop BG from your source */
-            background-image: url('https://pages.suraasa.com/hubfs/TDC/Kunskapsskolan/Phase%201,%20Gurgaon/Kunskapsskolan%20-%20Desktop.png');
-        }
-
-        /* MOBILE IMAGE FIX (Only shows on small screens) */
-        .tdc-banner__mobile-img {
-            display: none;
-            width: 100%;
-        }
-        .tdc-banner__mobile-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .sr-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 5%;
-            z-index: 2;
-        }
-
-        .tdc-banner__content {
-            max-width: 700px;
-        }
-
-        .tdc-banner__tag {
-            background: #dcfce7;
-            color: #166534;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-
-        .tdc-banner__heading {
-            font-size: 60px;
-            line-height: 1.1;
-            font-weight: 700;
-            margin-bottom: 25px;
-            letter-spacing: -2px;
-        }
-
-        .bold-txt {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 5px;
-        }
-
-        .banner__description {
-            font-size: 18px;
-            color: var(--text);
-            opacity: 0.8;
-            margin-bottom: 40px;
-        }
-
-/* --- SECTION 2: ABOUT THIS TDC STYLES --- */
-.tdc-section-white {
-    background: #ffffff;
-    padding: 100px 0;
-    color: #0f172a; /* Professional dark slate */
-}
-
-.tdc-content_block {
-    margin-bottom: 60px;
-}
-
-.tdc-heading {
-    font-size: 36px;
-    font-weight: 800;
-    color: #212d3a;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
-
-.tdc-description {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #516383;
-    max-width: 850px;
-}
-
-/* THE GRID SYSTEM */
-.tdc-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 30px;
-}
-
-.tdc-card {
-    background: #f8f9fa;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid #e5e7ea;
-    transition: all 0.3s ease; /* Smooth hover transition */
-}
-
-.tdc-card:hover {
-    transform: translateY(-10px); /* Lift effect */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    border-color: #d6b25e; /* Subtle gold highlight on hover */
-}
-
-.tdc-card__image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    background: #eef0f2;
-}
-
-.tdc-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.tdc-card:hover .tdc-card__image img {
-    transform: scale(1.05); /* Slight zoom on image */
-}
-
-.tdc-card__content {
-    padding: 30px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #516383;
-}
-
-.tdc-card_highlight {
-    display: block; /* Moves the title to its own line */
-    font-size: 18px;
-    font-weight: 700;
-    color: #212d3a;
-    margin-bottom: 12px;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) {
-    .tdc-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
-    }
-}
-
-@media (max-width: 768px) {
-    .tdc-section-white {
-        padding: 60px 0;
-    }
     
-    .tdc-heading {
-        font-size: 28px;
+    <meta property="og:description" content="Upgrade your teaching career with international qualifications at the Suraasa Teacher Development Centre hosted by Gyde at Kunskapsskolan Gurgaon.">
+    <meta property="og:title" content="Teacher Training &amp; Development Centre at Kunskapsskolan Gurgaon (Sec-28)">
+    <meta name="twitter:description" content="Upgrade your teaching career with international qualifications at the Suraasa Teacher Development Centre hosted by Gyde at Kunskapsskolan Gurgaon.">
+    <meta name="twitter:title" content="Teacher Training &amp; Development Centre at Kunskapsskolan Gurgaon (Sec-28)">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XZ778M3ZFJ"></script>
+
+<!-- /Added by GoogleAnalytics4 integration -->
+
+<!--  Added by GoogleTagManager integration -->
+<script>
+var _hsp = window._hsp = window._hsp || [];
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+var useGoogleConsentModeV2 = true;
+var waitForUpdateMillis = 1000;
+
+
+
+var hsLoadGtm = function loadGtm() {
+    if(window._hsGtmLoadOnce) {
+      return;
     }
 
-    .tdc-grid {
-        grid-template-columns: 1fr; /* 1 card per row on mobile */
-        gap: 20px;
+    if (useGoogleConsentModeV2) {
+
+      gtag('set','developer_id.dZTQ1Zm',true);
+
+      gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': waitForUpdateMillis
+      });
+
+      _hsp.push(['useGoogleConsentModeV2'])
     }
 
-    .tdc-card__image {
-        height: 200px;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5NPF89B');
+
+    window._hsGtmLoadOnce = true;
+};
+
+_hsp.push(['addPrivacyConsentListener', function(consent){
+  if(consent.allowed || (consent.categories && consent.categories.analytics)){
+    hsLoadGtm();
+  }
+}]);
+
+</script>
+
+<!-- /Added by GoogleTagManager integration -->
+
+    <link rel="canonical" href="https://pages.suraasa.com/teacher-development-centres/kunskapsskolan-gurgaon">
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "gm7q902ny8");
+
+</script>
+
+<meta property="og:url" content="https://pages.suraasa.com/teacher-development-centres/kunskapsskolan-gurgaon">
+<meta name="twitter:card" content="summary">
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <!-- Shared Tailwind-style utility CSS (same file used by tdc-surana-preview), needed for
+       the "PROOF" section below, which was given in that class-based convention rather
+       than this page's usual inline-style pattern. Already scoped under #tdc-lp. -->
+  <link rel="stylesheet" href="https://pages.suraasa.com/hubfs/hub_generated/template_assets/1/215038630237/1781862738395/template_tdc-tailwind.min.css">
+  <style>
+    body{ margin:0; }
+    #tdc-lp{ font-family:Inter,system-ui,sans-serif; background:#FFFFFF; color:#0F2233; }
+    #tdc-lp, #tdc-lp *, #tdc-lp *::before, #tdc-lp *::after{ box-sizing:border-box; }
+    #tdc-lp h1, #tdc-lp h2, #tdc-lp h3, #tdc-lp p, #tdc-lp figure{ margin:0; }
+    #tdc-lp img{ display:block; max-width:100%; }
+    /* HubSpot embedded form (hsfc developer embed), verbatim from the other TDC page
+       so the form's own internal padding doesn't double up on the card's padding. */
+    #tdc-lp .hsfc-Step__Content{ padding:0 !important; }
+    #tdc-lp .hsfc-Step__Content h2{ font-size:20px !important; margin-bottom:0 !important; }
+    #tdc-lp .hsfc-TextInput, #tdc-lp .hsfc-PhoneInput__FlagAndCaret{ padding:8px !important; }
+    #tdc-lp .form-control,
+    #tdc-lp input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit]),
+    #tdc-lp input[readonly]:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit]),
+    #tdc-lp select,
+    #tdc-lp textarea{ min-height:2rem !important; }
+    #tdc-lp .wrap{ max-width:1366px; margin:0 auto; }
+    #tdc-lp .px200{ padding-left:200px; padding-right:200px; }
+    @media (max-width:1100px){ #tdc-lp .px200{ padding-left:24px; padding-right:24px; } }
+    @media (max-width:1100px){ #tdc-lp .fig-row{ flex-direction:column !important; } }
+    /* Mobile fixes — added after the page was flagged as not mobile-optimized */
+    @media (max-width:480px){
+      #tdc-lp .nav-brochure-link{ display:none; }
+      #tdc-lp .nav-inner{ height:auto; }
+      #tdc-lp .nav-logo{ width:180px !important; height:auto !important; }
     }
+    @media (max-width:640px){
+      #tdc-lp .hero-badge{ white-space:nowrap; font-size:10px !important; padding:5px 10px !important; }
+      #tdc-lp .hero-heading{ font-size:32px !important; letter-spacing:-0.03em !important; }
+      #tdc-lp .campus-gradient{ height:28px !important; }
+      #tdc-lp .trust-stats-copy{ text-align:center; margin:0 auto; }
+      #tdc-lp .trust-stats-row{ gap:24px !important; }
+      #tdc-lp .trust-stats-row > *:nth-child(3){ flex-basis:100%; justify-content:center; }
+    }
+    @media (max-width:1100px){
+      #tdc-lp .facility-row{ flex-wrap:wrap; }
+      #tdc-lp .facility-tile{ width:100% !important; flex-shrink:1 !important; }
+      #tdc-lp .facility-fill{ flex:none !important; min-height:160px; }
+      #tdc-lp .cred-brochure-desktop{ display:none !important; }
+      #tdc-lp .cred-brochure-mobile{ display:flex !important; justify-content:center; text-align:center; margin-top:8px; }
+      #tdc-lp .why-tile{ flex-direction:row !important; }
+      #tdc-lp .why-tile-text{ padding:20px !important; flex:1; }
+      #tdc-lp .why-tile-image{ flex:none !important; width:110px; min-height:auto !important; }
+      #tdc-lp .why-tile-fade{ display:none; }
+    }
+    @media (max-width:480px){
+      #tdc-lp .cred-images-row{ flex-direction:column; align-items:center; }
+      #tdc-lp .cred-image-col{ max-width:280px !important; width:100%; }
+    }
+    #tdc-lp .checkerboard{
+      background-image: linear-gradient(45deg,#d9d9d9 25%,transparent 25%),
+                         linear-gradient(-45deg,#d9d9d9 25%,transparent 25%),
+                         linear-gradient(45deg,transparent 75%,#d9d9d9 75%),
+                         linear-gradient(-45deg,transparent 75%,#d9d9d9 75%);
+      background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0;
+      background-color:#efefef;
+    }
+    #tdc-lp .play-btn{ backdrop-filter:blur(44px); background:rgba(0,0,0,0.35); border-radius:36px; width:64px; height:64px; display:flex; align-items:center; justify-content:center; border:0; cursor:pointer; }
+    #tdc-lp .tdc-vthumb{ position:relative; cursor:pointer; overflow:hidden; }
+    #tdc-lp .tdc-vthumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+    #tdc-lp .tdc-vthumb::after{ content:''; position:absolute; inset:0; background:rgba(0,0,0,0.24); }
+    #tdc-lp .tdc-play{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:1; width:64px; height:64px; border-radius:36px; background:rgba(0,0,0,0.35); backdrop-filter:blur(44px); display:flex; align-items:center; justify-content:center; }
+    #tdc-lp .tdc-play i{ width:0; height:0; border-style:solid; border-width:10px 0 10px 16px; border-color:transparent transparent transparent #FFFFFF; margin-left:4px; display:block; }
+    .tdc-video-modal{ position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,0.85); display:flex; align-items:center; justify-content:center; padding:24px; }
+    .tdc-video-modal__inner{ position:relative; width:100%; max-width:900px; }
+    .tdc-video-modal__inner video{ width:100%; max-height:80vh; border-radius:12px; display:block; background:#000; }
+    .tdc-video-modal__close{ position:absolute; top:-40px; right:0; background:transparent; border:0; color:#FFFFFF; font-size:32px; line-height:1; cursor:pointer; }
+    .tdc-form-modal{ position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,0.85); display:none; align-items:center; justify-content:center; padding:24px; }
+    .tdc-form-modal.active{ display:flex; }
+    .tdc-form-modal__inner{ position:relative; width:100%; max-width:480px; background:#FFFFFF; border-radius:16px; padding:32px 24px 24px; }
+    .tdc-form-modal__close{ position:absolute; top:-40px; right:0; background:transparent; border:0; color:#FFFFFF; font-size:32px; line-height:1; cursor:pointer; }
+    @media (max-height:700px), (max-width:640px){ .tdc-form-modal__inner{ max-height:90vh; overflow-y:auto; } }
+    /* Cohort photo slider — verbatim from tdc-surana-preview/surana-tdc.html */
+    #tdc-lp .tdc-gallery{ position:relative; margin-top:20px; }
+    #tdc-lp .tdc-slider{ display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; padding:0 20px 8px; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    #tdc-lp .tdc-slider::-webkit-scrollbar{ display:none; }
+    #tdc-lp .tdc-slide{ flex:0 0 auto; width:min(80%,420px); aspect-ratio:3/2; scroll-snap-align:start; scroll-snap-stop:always; border-radius:16px; overflow:hidden; background:#EFE7D5; }
+    #tdc-lp .tdc-slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+    #tdc-lp .tdc-arrow{ position:absolute; top:50%; transform:translateY(-50%); z-index:5; width:44px; height:44px; border-radius:9999px; background:#0F0D0A; color:#fff; border:0; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:24px; line-height:1; box-shadow:0 2px 10px rgba(0,0,0,.22); }
+    #tdc-lp .tdc-arrow.prev{ left:6px; } #tdc-lp .tdc-arrow.next{ right:6px; }
+    @media (max-width:767px){
+      #tdc-lp .tdc-gallery{ width:100vw; margin-left:calc(50% - 50vw); }
+      #tdc-lp .tdc-slide{ width:82%; }
+    }
+    /* LinkedIn learner-post screenshot carousel — reuses .tdc-gallery/.tdc-slider/.tdc-arrow,
+       but overrides .tdc-slide sizing since these are tall un-cropped screenshots, not 3:2 photos. */
+    #tdc-lp .tdc-li-slide{ width:280px; aspect-ratio:auto; background:#FFFFFF; border:1px solid #EAEAE6; box-shadow:0 1px 2px rgba(0,0,0,0.05); }
+    #tdc-lp .tdc-li-slide img{ width:100%; height:auto; }
+    /* Interactive map + location card */
+    #tdc-lp .map-wrapper{ position:relative; border-radius:16px; overflow:hidden; margin-top:24px; }
+    #tdc-lp .map-container iframe{ display:block; width:100%; }
+    #tdc-lp .location-card{ position:absolute; left:24px; bottom:24px; width:340px; max-width:calc(100% - 48px); background:#FFFFFF; border-radius:16px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.15); }
+    #tdc-lp .school-name{ font-weight:700; font-size:18px; color:#0f172a; margin-bottom:8px; }
+    #tdc-lp .address p{ margin:0; font-size:14px; color:#64748b; line-height:1.5; }
+    #tdc-lp .session-block{ margin-top:16px; padding-top:16px; border-top:1px solid #EAEAE6; }
+    #tdc-lp .session-day span{ display:block; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:#b5811c; margin-bottom:4px; }
+    #tdc-lp .session-day p{ margin:0; font-weight:600; color:#0f172a; font-size:15px; }
+    #tdc-lp .info-row{ margin-top:12px; }
+    #tdc-lp .info-block{ display:flex; gap:16px; }
+    #tdc-lp .info-item span{ display:block; font-size:12px; color:#64748b; margin-bottom:2px; }
+    #tdc-lp .info-item p{ margin:0; font-weight:600; color:#0f172a; font-size:14px; }
+    @media (max-width:600px){ #tdc-lp .location-card{ position:static; width:auto; max-width:none; margin-top:16px; margin-left:16px; margin-right:16px; } }
+    /* Arrows below the carousel instead of overlapping the images */
+    #tdc-lp .tdc-gallery--below-arrows{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:16px; }
+    #tdc-lp .tdc-gallery--below-arrows .tdc-slider{ flex:1 1 100%; }
+    #tdc-lp .tdc-gallery--below-arrows .tdc-arrow{ position:static; transform:none; }
+    /* FAQ — tabbed categories (desktop) + accordion (mobile) */
+    #tdc-lp .faq-section{ padding:96px 0; }
+    #tdc-lp .faq-heading{ font-weight:700; color:#0f172a; font-size:28px; letter-spacing:-0.56px; margin:0 0 36px; }
+    #tdc-lp .faq-wrapper{ display:flex; gap:40px; align-items:flex-start; }
+    #tdc-lp .faq-categories{ display:flex; flex-direction:column; gap:4px; width:280px; flex-shrink:0; }
+    #tdc-lp .faq-category-tab{ display:flex; align-items:center; gap:10px; padding:14px 16px; border-radius:10px; font-size:14px; font-weight:600; color:#1E293B; cursor:pointer; }
+    #tdc-lp .faq-category-tab svg{ flex-shrink:0; opacity:0; transition:opacity .15s ease; }
+    #tdc-lp .faq-category-tab:hover{ background:#f8f7f5; }
+    #tdc-lp .faq-category-tab.active{ background:#f1f5f9; }
+    #tdc-lp .faq-category-tab.active svg{ opacity:1; }
+    #tdc-lp .faq-content{ flex:1; min-width:0; }
+    #tdc-lp .faq-accordion-wrapper{ display:none; flex-direction:column; gap:8px; }
+    #tdc-lp .faq-accordion-wrapper.active{ display:flex; }
+    #tdc-lp .faq-item{ background:#f8f7f5; border-radius:12px; overflow:hidden; }
+    #tdc-lp .faq-question{ width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; text-align:left; background:transparent; border:0; padding:20px; font-family:Inter,system-ui,sans-serif; font-weight:600; font-size:16px; color:#14151b; cursor:pointer; }
+    #tdc-lp .faq-icon{ flex-shrink:0; display:flex; transition:transform .2s ease; }
+    #tdc-lp .faq-item.open .faq-icon{ transform:rotate(180deg); }
+    #tdc-lp .faq-answer{ display:none; padding:0 20px 20px; font-size:14px; line-height:1.6; color:#475569; }
+    #tdc-lp .faq-item.open .faq-answer{ display:block; }
+    #tdc-lp .faq-answer ul{ margin:8px 0 0; padding-left:20px; }
+    #tdc-lp .faq-answer li{ margin-bottom:6px; }
+    #tdc-lp .faq-mobile-wrapper{ display:none; }
+    #tdc-lp .faq-category-mobile{ border-bottom:1px solid #EAEAE6; }
+    #tdc-lp .faq-category-toggle{ width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; text-align:left; background:transparent; border:0; padding:18px 0; font-family:Inter,system-ui,sans-serif; font-weight:700; font-size:16px; color:#0f172a; cursor:pointer; }
+    #tdc-lp .faq-category-icon{ flex-shrink:0; display:flex; transition:transform .2s ease; }
+    #tdc-lp .faq-category-mobile.open > .faq-category-toggle .faq-category-icon{ transform:rotate(180deg); }
+    #tdc-lp .faq-category-content{ display:none; flex-direction:column; gap:8px; padding-bottom:16px; }
+    #tdc-lp .faq-category-mobile.open .faq-category-content{ display:flex; }
+    @media (max-width:900px){
+      #tdc-lp .faq-wrapper{ display:none; }
+      #tdc-lp .faq-mobile-wrapper{ display:flex; flex-direction:column; }
+
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/500.woff2') format('woff2');
 }
 
-        /* META DATA (COHORT INFO) */
-        .tdc-banner__meta {
-            display: flex;
-            gap: 40px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 25px;
-            margin-bottom: 45px;
-        }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/700.woff2') format('woff2');
+}</style><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11418049085"></script><style data-hs-form-font-resource="Inter-1df41926-2756-44ba-ba22-4da1f15956c7">@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/regular.woff2') format('woff2');
+}
 
-        .tdc-meta-item {
-            display: flex;
-            flex-direction: column;
-        }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/500.woff2') format('woff2');
+}
 
-        .meta-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            color: var(--muted);
-            font-weight: 600;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
-        }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/700.woff2') format('woff2');
+}</style><style data-hs-form-font-resource="Inter-575d9d56-5e4b-491a-85e9-bac62b965262">@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/regular.woff2') format('woff2');
+}
 
-        .meta-value {
-            font-size: 20px;
-            font-weight: 700;
-        }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/500.woff2') format('woff2');
+}
 
-        /* BUTTONS */
-        .tdc-banner__buttons {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('https://cdn1.hubspot.net/googlefonts/fonts/Inter/700.woff2') format('woff2');
+}</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/789727990/?random=1786686454807&amp;cv=11&amp;fst=1786686454807&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be68c1v9110710996z879826784za20gzb79826784zd79826784xec&amp;gcd=13r3r3r3r5l1&amp;dma=0&amp;tag_exp=115938466~115938468~117776795~118897920~118897930~119367802~119367810~119527019~120125304~120385423&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.suraasa.com%2Fteacher-development-centres%2Fkunskapsskolan-gurgaon%3F&amp;rcb=19&amp;frm=0&amp;tiba=Teacher%20Training%20%26%20Development%20Centre%20at%20Kunskapsskolan%20Gurgaon%20(Sec-28)&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=699840055.1786540235&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11418049085/?random=1786686454879&amp;cv=11&amp;fst=1786686454879&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be68c1v9171460698za200zb9245712229zd9245712229xec&amp;gcd=13r3r3r3r5l1&amp;dma=0&amp;tag_exp=115616985~115938466~115938469~117776795~118012007~118897920~118897930~119367802~119367810~119527020~120385423&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.suraasa.com%2Fteacher-development-centres%2Fkunskapsskolan-gurgaon%3F&amp;rcb=1&amp;frm=0&amp;tiba=Teacher%20Training%20%26%20Development%20Centre%20at%20Kunskapsskolan%20Gurgaon%20(Sec-28)&amp;did=dZTQ1Zm&amp;gdid=dZTQ1Zm&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=699840055.1786540235&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11414817448/?random=1786686454996&amp;cv=11&amp;fst=1786686454996&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be68c1v9171249517za200zb9245712229zd9245712229xec&amp;gcd=13r3r3r3r5l1&amp;dma=0&amp;tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120213116~120385423&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.suraasa.com%2Fteacher-development-centres%2Fkunskapsskolan-gurgaon%3F&amp;rcb=17&amp;frm=0&amp;tiba=Teacher%20Training%20%26%20Development%20Centre%20at%20Kunskapsskolan%20Gurgaon%20(Sec-28)&amp;did=dZTQ1Zm&amp;gdid=dZTQ1Zm&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=699840055.1786540235&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head>
+<body><div id="hs-web-interactives-top-push-anchor" class="go3670563033"></div>
+<!--  Added by GoogleTagManager integration -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NPF89B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-        .center-btn-primary {
-            background: #ffffff;
-            color: #000000;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+<!-- /Added by GoogleTagManager integration -->
 
-        .center-btn-secondary {
-            background: transparent;
-            color: #ffffff;
-            padding: 14px 20px;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 16px;
-            border-bottom: 2px solid transparent;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+<div id="tdc-lp">
 
-        .center-btn-secondary:hover {
-            border-bottom-color: #ffffff;
-        }
-
-        /* RESPONSIVE LOGIC */
-        @media (max-width: 768px) {
-            .tdc-banner {
-                background-image: none !important;
-                background-color: #000;
-                flex-direction: column;
-                min-height: auto;
-                padding-bottom: 60px;
-            }
-            .tdc-banner__mobile-img {
-                display: block;
-                margin-bottom: 30px;
-            }
-            .tdc-banner__heading {
-                font-size: 40px;
-            }
-            .tdc-banner__buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .center-btn-primary {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        /* MODAL STYLES (Kept from previous version) */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(8px); }
-        .modal-content { background: var(--card); margin: 10% auto; padding: 40px; border: 1px solid var(--border); width: 90%; max-width: 450px; border-radius: 12px; position: relative; }
-        .close-modal { position: absolute; right: 20px; top: 15px; color: var(--muted); font-size: 28px; cursor: pointer; }
-        input { width: 100%; padding: 14px; margin: 10px 0; border-radius: 6px; border: 1px solid var(--border); background: #000; color: #fff; font-size: 16px; }
-        .btn-submit { background: var(--gold); color: #000; width: 100%; padding: 16px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; margin-top: 10px; }
-    </style>
-</head>
-<body>
-
-<section class="tdc-banner">
-
-    <!-- ✅ FULL WIDTH MOBILE IMAGE -->
-    <div class="tdc-banner__mobile-img">
-      <img src="https://pages.suraasa.com/hubfs/TDC/Kunskapsskolan/Phase%201,%20Gurgaon/Kunskapsskolan%20-%20Mobile.png" alt="Banner">
-    </div>
-  
-    <div class="sr-container">
-      <div class="tdc-banner__content">
-        <div class="tdc-banner__left">
-  
-          <span class="tdc-banner__tag tag-open">Enrolment Open</span>
-  
-          <h1 class="tdc-banner__heading">Suraasa Teacher Development Centre</h1>
-  
-          <div style="margin-bottom: 35px;">
-            <p style="font-size: 18px;">hosted by 
-                <img src="https://pages.suraasa.com/hubfs/TDC/Kunskapsskolan/Phase%201%2c%20Gurgaon/Gyde%20White%20Logo.svg" style="max-height: 28px; vertical-align: middle; margin-left: 8px;" loading="eager"> 
-                at
-            </p>
-            <p class="bold-txt">Kunskapsskolan Gurgaon</p>
-            <p class="banner__description">Sector 28, Gurugram</p>
-          </div>
-  
-          <div class="tdc-banner__meta">
-            <div class="tdc-meta-item">
-              <span class="meta-label">Next Cohort Starts</span>
-              <span class="meta-value">25 April 2026</span>
-            </div>
-            <div class="tdc-meta-item">
-              <span class="meta-label">Cohort Capacity</span>
-              <span class="meta-value">50 seats</span>
-            </div>
-          </div>
-  
-          <div class="tdc-banner__buttons">
-            <a class="center-btn-primary" onclick="document.getElementById('apply-section').scrollIntoView({behavior:'smooth'})">Enroll Now</a>
-            <a class="center-btn-secondary" id="openAdvisor">Talk to an Advisor</a>
-          </div>
-  
+  <!-- NAVBAR — node 993:4475 -->
+  <header style="background:#FFFFFF;">
+    <div class="wrap px200" style="display:flex; align-items:center; justify-content:center;">
+      <div class="nav-inner" style="display:flex; align-items:center; justify-content:space-between; width:1257px; height:64px; max-width:100%; flex-wrap:wrap; row-gap:8px;">
+        <img src="https://pages.suraasa.com/hs-fs/hubfs/TDC/kunskapsskolan-assets/navbar-logo-lockup.png?height=40&amp;name=navbar-logo-lockup.png" alt="Suraasa Teacher Development Center, hosted by Gyde and Kunskapsskolan Gurgaon" height="40" class="nav-logo" style="width:268.2px;height:40px;min-width:0;">
+        <div class="nav-buttons" style="display:flex; gap:11px; align-items:center; min-width:0; flex-wrap:wrap;">
+          <a href="#" class="nav-brochure-link" onclick="tdcOpenBrochure(event)" style="background:#FFFFFF;border:1px solid #cbd5e1;border-radius:10px;padding:8px 16px;font-family:Inter;font-weight:600;font-size:14px;color:#334155;text-decoration:none;box-shadow:0px 1px 0.5px rgba(15,23,42,0.04),0px 4px 2px rgba(15,23,42,0.02);white-space:nowrap;">Download Brochure</a>
+          <a href="#tdc-form" class="nav-call-link" style="background:#0f172a;border-radius:10px;padding:8px 16px;font-family:Inter;font-weight:600;font-size:14px;color:#FFFFFF;text-decoration:none;box-shadow:0px 1px 0.5px rgba(15,23,42,0.04),0px 4px 2px rgba(15,23,42,0.02);white-space:nowrap;">Book a Call</a>
         </div>
       </div>
     </div>
-</section>
+  </header>
 
-<!-- MODAL POPUP -->
-<div id="advisorModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2 style="margin-bottom: 20px;">Talk to an Advisor</h2>
-        <form id="advisorForm">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <button type="submit" class="btn-submit">Request Callback</button>
-        </form>
+  <!-- HERO — node 993:4483 -->
+  <section style="background:linear-gradient(to bottom, #fbf4e2 45%, #ffecbd 100%);">
+    <div class="wrap px200 grid gap-8 md:gap-10 md:grid-cols-[1.05fr_.95fr] items-center py-12 md:py-16">
+      <div style="display:flex; flex-direction:column; gap:20px; align-items:flex-start; min-width:0;">
+        <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+          <div class="hero-badge" style="background:#FFFFFF; border-radius:9999px; padding:6px 13px; display:flex; gap:3px; align-items:center; font-size:13px; box-shadow:0 1px 1px rgba(0,0,0,0.05);">
+            <p style="font-weight:600; color:#000000; margin:0;">Cohort 3 · Admission Closes 26 Sep 2026 · 30 Seats</p>
+          </div>
+          <p class="hero-heading" style="font-weight:700; color:#0f2233; font-size:52px; line-height:1.2; letter-spacing:-1.56px; margin:0;">Build your teaching career inside Gurgaon's <span style="color:#b5811c;">leading IB school.</span></p>
+        </div>
+        <p style="font-weight:500; color:#5a5340; font-size:18px; line-height:28px; margin:0;"><span>A </span><span style="font-weight:700; color:#0f2233;">1-year certification program</span><span> on the Kunskapsskolan campus, Gurgaon. One Saturday a month. Two globally recognised qualifications.</span></p>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span style="color:#F5C542; letter-spacing:0.1em; font-size:16px;">★★★★★</span>
+            <span style="font-weight:700; color:#0f2233; font-size:16px;">4.8</span>
+          </div>
+          <p style="font-weight:500; font-size:14px; color:rgb(90 83 64 / var(--tw-text-opacity,1)); margin:0;">Trusted by 700,000+ Teachers</p>
+        </div>
+      </div>
+      <div class="hero-form-card bg-cream-card border rounded-[20px] p-6 shadow-2xl">
+        <div id="tdc-form">
+          <form id="advisorForm"
+                action="https://script.google.com/macros/s/AKfycbz0nMkgQ_ju8IRFBgnVWtsQDqw0Cd8BO1UdUzrrCCJ27TESjBx94iKAvIPY9ulSN1V3/exec"
+                method="POST"
+                target="advisorFormFrame"
+                style="font-family:Inter,system-ui,sans-serif; margin:0; padding:0; border:0; background:none; color:#0f172a;">
+
+            <h2 style="font-family:Inter,system-ui,sans-serif; font-size:20px; line-height:1.3; margin:0 0 18px; color:#0f172a; font-weight:700;">Talk to an Advisor</h2>
+
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div>
+                <label for="fullName" style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">Full Name</label>
+                <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="Enter your full name" style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+              </div>
+
+              <div>
+                <label for="email" style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">Email Address</label>
+                <input id="email" name="email" type="email" required autocomplete="email" placeholder="Enter your email address" style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+              </div>
+
+              <div>
+                <label for="profession" style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">Current Profession</label>
+                <input id="profession" name="profession" type="text" required autocomplete="organization-title" placeholder="Enter your current profession" style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+              </div>
+
+              <div>
+                <label for="qualification" style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">Highest Qualification</label>
+                <input id="qualification" name="qualification" type="text" required placeholder="Enter your highest qualification" style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+              </div>
+
+              <div>
+                <label for="phone" style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">Phone Number</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="Enter your phone number" style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+              </div>
+
+              <input type="hidden" name="source" value="Kunskapsskolan TDC Website">
+
+              <button type="submit" style="width:100%; min-height:48px; margin-top:2px; padding:0 20px; border:0; border-radius:10px; background:#0f172a; color:#FFFFFF; font-family:Inter,system-ui,sans-serif; font-size:15px; font-weight:600; cursor:pointer;">Book a Call</button>
+
+              <p id="advisorFormMessage" style="display:none; margin:2px 0 0; font-size:13px; line-height:1.5; text-align:center;"></p>
+            </div>
+          </form>
+          <iframe name="advisorFormFrame" id="advisorFormFrame" title="Form submission" style="display:none;"></iframe>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
+
+  <!-- SOCIAL PROOF: 3 stats — node 993:4523 -->
+  <section style="background:#12110d; padding:96px 0;">
+    <div class="wrap px200 fig-row" style="display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <div class="trust-stats-copy" style="color:#FFFFFF; width:299px; max-width:100%;">
+        <p style="font-weight:700; font-size:20px; letter-spacing:-0.4px; margin:0 0 8px;">Trusted by teachers. Recognized globally.</p>
+        <p style="font-weight:400; font-size:16px; opacity:0.6; margin:0;">Hundreds of thousands of educators have advanced their careers with Suraasa.</p>
+      </div>
+      <div class="trust-stats-row" style="display:flex; gap:62px; align-items:center; justify-content:center; flex-wrap:wrap; width:100%;">
+        <div style="display:flex; flex-direction:column; gap:5px; align-items:center; min-width:113px;">
+          <div style="display:flex;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/ellipse6.png" style="width:29px;height:29px;margin-right:-10px;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/ellipse8.png" style="width:29px;height:29px;margin-right:-10px;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/ellipse9.png" style="width:29px;height:29px;">
+          </div>
+          <p style="font-weight:700; font-size:28px; color:#FFFFFF; margin:0;">700,000+</p>
+          <p style="font-weight:400; font-size:12px; color:rgba(255,255,255,0.52); margin:0;">Teachers upskilled</p>
+        </div>
+        <div style="position:relative; display:flex; align-items:center; gap:0;">
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/laurel-left.svg" style="width:38px;height:80px;">
+          <div style="display:flex; flex-direction:column; align-items:center; margin:0 6px;">
+            <p style="font-weight:700; font-size:37px; color:#FFFFFF; margin:0;">4.8</p>
+            <div style="display:flex; gap:2px; margin:4px 0;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rating-star1.svg" style="width:9px;height:9px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rating-star2.svg" style="width:9px;height:9px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rating-star3.svg" style="width:9px;height:9px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rating-star4.svg" style="width:9px;height:9px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rating-star5.svg" style="width:9px;height:9px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rating-star6.svg" style="width:9px;height:9px;">
+            </div>
+            <p style="font-weight:400; font-size:10px; color:rgba(255,255,255,0.52); margin:0;">Avg. rating</p>
+          </div>
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/laurel-left.svg" style="width:38px;height:80px;transform:scaleX(-1);">
+        </div>
+        <div style="position:relative; display:flex; align-items:center;">
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/laurel-left.svg" style="width:38px;height:80px;">
+          <div style="display:flex; flex-direction:column; align-items:center; margin:0 6px;">
+            <p style="font-weight:700; font-size:28px; color:#FFFFFF; margin:0;">Top 10</p>
+            <p style="font-weight:400; font-size:10px; color:rgba(255,255,255,0.7); text-align:center; width:71px; margin:4px 0 0;">Global EdTech Prize 2025</p>
+          </div>
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/laurel-left.svg" style="width:38px;height:80px;transform:scaleX(-1);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS — node 993:4560 -->
+  <section style="background:#FFFFFF;">
+    <div class="wrap px200 fig-row" style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding-top:96px; padding-bottom:96px;">
+      <div style="display:flex; flex-direction:column; gap:16px; width:484px; max-width:100%;">
+        <div>
+          <p style="font-weight:600; color:#b5811c; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; margin:0 0 4px;">The campus</p>
+          <p style="font-weight:700; color:#0f2233; font-size:32px; letter-spacing:-0.64px; margin:0;">Learn inside a Gurgaon IB school campus, established 2013.</p>
+        </div>
+        <p style="font-weight:500; color:#64748b; font-size:18px; line-height:1.3; margin:0;">Kunskapsskolan Gurgaon offers IB and CBSE programs across K-12, founded on personalised learning and teachers who coach rather than instruct. Gyde hosts the Suraasa Teacher Development Center here, bringing the same commitment to teacher growth to working educators across NCR.</p>
+      </div>
+      <div class="tdc-vthumb" style="width:360px; max-width:100%; aspect-ratio:360/400; height:auto; border-radius:16px; flex-shrink:0;" onclick="tdcOpen()" role="button" aria-label="Play the Kunskapsskolan campus experience video">
+        <img src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/kkp-experience-poster.jpg" alt="A day at the Kunskapsskolan campus, Gurgaon">
+        <div class="tdc-play"><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM — node 993:4569 -->
+  <section style="background:#FFFFFF; padding-bottom:96px;">
+    <div class="wrap px200" style="display:flex; flex-direction:column; gap:24px;">
+      <div>
+        <p style="font-weight:600; color:#b5811c; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; margin:0 0 4px;">The program</p>
+        <p style="font-weight:700; color:#0f172a; font-size:32px; letter-spacing:-0.64px; margin:0 0 8px;">A full year of structured training.</p>
+        <p style="font-weight:500; color:#64748b; font-size:18px; margin:0;">Three things run in parallel for twelve months.</p>
+      </div>
+      <div class="fig-row" style="display:flex; gap:16px; align-items:stretch;">
+        <div style="flex:1; background:#f8f7f5; border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:20px; box-shadow:0px 1px 1px rgba(0,0,0,0.05);">
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/icon-mdi-web.svg" style="width:24px;height:24px;">
+          <div>
+            <p style="font-weight:600; color:#0f172a; font-size:16px; margin:0 0 4px;">Online, at your pace</p>
+            <p style="font-weight:400; color:#475569; font-size:14px; line-height:1.3; margin:0;">Video lessons, reading modules, and progress assessments between sessions.</p>
+          </div>
+        </div>
+        <div style="flex:1.42; background:#f8f7f5; border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:20px; box-shadow:0px 1px 1px rgba(0,0,0,0.05);">
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/icon-building.svg" style="width:24px;height:24px;">
+          <div>
+            <p style="font-weight:600; color:#0f172a; font-size:16px; margin:0 0 4px;">On campus, once a month</p>
+            <p style="font-weight:400; color:#475569; font-size:14px; line-height:1.3; margin:0;">A full 8-hour Saturday at Kunskapsskolan with live faculty from the US, UAE, and Lebanon, plus case studies, peer observation, and real teaching practice.</p>
+          </div>
+        </div>
+        <div style="flex:1; background:#f8f7f5; border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:20px; box-shadow:0px 1px 1px rgba(0,0,0,0.05);">
+          <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/icon-group.svg" style="width:24px;height:24px;">
+          <div>
+            <p style="font-weight:600; color:#0f172a; font-size:16px; margin:0 0 4px;">Applied in your classroom</p>
+            <p style="font-weight:400; color:#475569; font-size:14px; line-height:1.3; margin:0;">Skill-based assignments where you put your learning to work with real students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TEACHERS JOIN / CREDENTIALS — node 993:4597 -->
+  <section style="background:#FFFFFF; padding-bottom:72px;">
+    <div class="wrap px200" style="display:flex; flex-direction:column; gap:47px;">
+      <div>
+        <p style="font-weight:600; color:#b5811c; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; margin:0 0 4px;">Why teachers join</p>
+        <p style="font-weight:700; color:#0f2233; font-size:32px; letter-spacing:-0.64px; margin:0;">What you take away from the year.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div class="fig-row" style="background:#f8f7f5; border-radius:16px; padding:42px 48px; display:flex; gap:42px; align-items:center;">
+          <div style="flex:1; display:flex; flex-direction:column;">
+            <div>
+              <p style="font-weight:700; color:#0f172a; font-size:24px; letter-spacing:-0.48px; margin:0 0 12px;">Two qualifications schools recognise worldwide.</p>
+              <p style="font-weight:400; color:#64748b; font-size:16px; line-height:1.3; margin:0 0 60px;">In twelve months you earn the Professional Graduate Certificate in Teaching &amp; Learning (PgCTL) and the ATHE Level 6 Diploma in Teaching, regulated by UK OFQUAL.</p>
+            </div>
+            <a class="cred-brochure-link cred-brochure-desktop" href="#" onclick="tdcOpenBrochure(event)" style="color:#3b82f6; font-weight:600; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">Download Program Brochure →</a>
+          </div>
+          <div class="cred-images-row" style="display:flex; gap:16px; align-items:flex-start; max-width:100%;">
+            <div class="cred-image-col" style="flex:1; max-width:232px; min-width:0;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/cred-pgctl-final.png" style="display:block;width:100%;height:auto;aspect-ratio:232/302;object-fit:cover;">
+              <p style="font-weight:500; color:#64748b; font-size:9px; line-height:1; margin:8px 0 0;">PgCTL</p>
+            </div>
+            <div class="cred-image-col" style="flex:1; max-width:211px; min-width:0;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/cred-athe-final.png" style="display:block;width:100%;height:auto;aspect-ratio:211/302;object-fit:cover;">
+              <p style="font-weight:500; color:#64748b; font-size:9px; line-height:1; margin:8px 0 0;">ATHE</p>
+            </div>
+          </div>
+          <a class="cred-brochure-link cred-brochure-mobile" href="#" onclick="tdcOpenBrochure(event)" style="color:#3b82f6; font-weight:600; font-size:14px; text-decoration:none; display:none; align-items:center; justify-content:center; gap:4px; width:100%;">Download Program Brochure →</a>
+        </div>
+        <div class="fig-row" style="display:flex; gap:8px; align-items:stretch;">
+          <div class="why-tile" style="flex:1; border-radius:8px; overflow:hidden; display:flex; flex-direction:column;">
+            <div class="why-tile-text" style="background:#f8f7f5; padding:42px;">
+              <p style="font-weight:700; color:#0f172a; font-size:20px; letter-spacing:-0.4px; margin:0 0 12px;">Get the opportunity to learn and teach at the host school.</p>
+              <p style="font-weight:400; color:#64748b; font-size:14px; line-height:1.3; margin:0;">Train inside a working IB campus — Kunskapsskolan Gurgaon — with live faculty from the US, UAE and Lebanon, and put yourself on the radar of top international schools for teaching roles.</p>
+            </div>
+            <div class="why-tile-image" style="position:relative; flex:1; min-height:180px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/why-card1.png" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top;">
+              <div class="why-tile-fade" style="position:absolute; left:0; right:0; top:0; height:65px; background:linear-gradient(to bottom, #f8f7f5 0%, rgba(248,247,245,0) 100%); pointer-events:none;"></div>
+            </div>
+          </div>
+          <div class="why-tile" style="flex:1; border-radius:8px; overflow:hidden; display:flex; flex-direction:column;">
+            <div class="why-tile-text" style="background:#f8f7f5; padding:42px;">
+              <p style="font-weight:700; color:#0f172a; font-size:20px; letter-spacing:-0.4px; margin:0 0 12px;">Meet and network with like-minded teachers.</p>
+              <p style="font-weight:400; color:#64748b; font-size:14px; line-height:1.3; margin:0;">Join a cohort of 30 working teachers who meet on campus every month for live sessions and peer observation, the people growing alongside you.</p>
+            </div>
+            <div class="why-tile-image" style="position:relative; flex:1; min-height:180px;">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/why-card2.png" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+              <div class="why-tile-fade" style="position:absolute; left:0; right:0; top:0; height:28px; background:linear-gradient(to bottom, #f8f7f5 0%, rgba(248,247,245,0) 100%); pointer-events:none;"></div>
+            </div>
+          </div>
+          <div class="why-tile" style="flex:1; border-radius:8px; overflow:hidden; display:flex; flex-direction:column;">
+            <div class="why-tile-text" style="background:#f8f7f5; padding:42px;">
+              <p style="font-weight:700; color:#0f172a; font-size:20px; letter-spacing:-0.4px; margin:0 0 12px;">Accelerate your teaching career.</p>
+              <p style="font-weight:400; color:#64748b; font-size:14px; line-height:1.3; margin:0;">Build the classroom expertise that helps you take the next step in your teaching career.</p>
+            </div>
+            <div class="why-tile-image" style="position:relative; flex:1; min-height:180px; background:linear-gradient(to bottom, #f8f7f5 33.8%, #d6e8fe 100%);">
+              <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/why-card3.png" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%;">
+              <div class="why-tile-fade" style="position:absolute; left:0; right:0; top:0; height:65px; background:linear-gradient(to bottom, #f8f7f5 0%, rgba(248,247,245,0) 100%); pointer-events:none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="py-14 bg-cream-2">
+    <div class="max-w-[1040px] mx-auto px-5">
+      <span class="text-[12px] font-semibold uppercase tracking-[0.1em] text-gold-deep">Proof</span>
+      <h2 class="text-[28px] md:text-[34px] font-bold tracking-tight mt-2 mb-3.5">From Gyde, and teachers already in the program.</h2>
+      <div class="grid md:grid-cols-2 gap-5 mt-[6px] items-center tdc-proof">
+        <div>
+          <video src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/gyde-director.mp4" poster="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/kkp-principal-poster.jpg" controls="" playsinline="" preload="metadata" class="rounded-2xl" style="width:100%;max-width:380px;aspect-ratio:1/1;object-fit:cover;background:#000;display:block"></video>
+        </div>
+        <div class="bg-white border border-line rounded-2xl p-[22px] shadow-sm flex flex-col justify-center">
+          <div class="border-l-[3px] border-gold pl-[18px] py-1.5 text-[17px] italic">Teachers who go through this program will be on the radar of top international schools for teaching roles, as we're all looking for people who've committed to growing at this level.<span class="block not-italic text-sm font-semibold text-ink-muted mt-2">Kunal Bhadoo, Director, Gyde</span></div>
+        </div>
+      </div>
+      <!-- TODO: Replace cohort slide images with KKP-specific cohort photos (900x600, 3:2, named cohort-01..NN.jpg under kkp-lp-new/) -->
+      <!-- If no KKP-specific cohort photos are available yet, DSB cohort photos can be used as a placeholder and swapped after the first on-campus day -->
+      <div class="tdc-gallery tdc-gallery--below-arrows">
+        <div class="tdc-slider">
+          <div class="tdc-slide"><img src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/cohort-01.jpg" alt="Cohort learning at Kunskapsskolan Gurgaon" loading="lazy"></div>
+          <div class="tdc-slide"><img src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/cohort-02.jpg" alt="Cohort learning at Kunskapsskolan Gurgaon" loading="lazy"></div>
+          <div class="tdc-slide"><img src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/cohort-03.jpg" alt="Cohort learning at Kunskapsskolan Gurgaon" loading="lazy"></div>
+          <div class="tdc-slide"><img src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/cohort-04.jpg" alt="Cohort learning at Kunskapsskolan Gurgaon" loading="lazy"></div>
+          <div class="tdc-slide"><img src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/cohort-05.jpg" alt="Cohort learning at Kunskapsskolan Gurgaon" loading="lazy"></div>
+        </div>
+        <button class="tdc-arrow prev" onclick="tdcScroll(this,-1)" aria-label="Previous">‹</button>
+        <button class="tdc-arrow next" onclick="tdcScroll(this,1)" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKEDIN LEARNER POSTS -->
+  <!-- Screenshot carousel (no hyperlinks, per request) — same slider/arrow pattern as the
+       "From Gyde, and teachers already in the program" cohort gallery above. -->
+  <section class="py-14" style="background:#FFFFFF;">
+    <div class="max-w-[1040px] mx-auto px-5">
+      <span class="text-[12px] font-semibold uppercase tracking-[0.1em] text-gold-deep">Community</span>
+      <h2 class="text-[28px] md:text-[34px] font-bold tracking-tight mt-2 mb-3.5">What teachers are saying</h2>
+      <div class="tdc-gallery tdc-gallery--below-arrows">
+        <div class="tdc-slider tdc-li-slider">
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-diksha-phagna.jpg" alt="Diksha Phagna's LinkedIn post about starting the PGCTL program with Suraasa"></div>
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-archana-gulati.jpg" alt="Archana Gulati's LinkedIn post about Suraasa TDC Session 2"></div>
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-nikit-garg.jpg" alt="Nikit Garg's LinkedIn post about joining the Teacher Development Center"></div>
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-susmita-sengupta.jpg" alt="Susmita Sengupta's LinkedIn post about joining the PGCTL course orientation at Kunskapsskolan Gurgaon"></div>
+        </div>
+        <button class="tdc-arrow prev" onclick="tdcScroll(this,-1)" aria-label="Previous">‹</button>
+        <button class="tdc-arrow next" onclick="tdcScroll(this,1)" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14" style="background:#FFFFFF;">
+    <div class="max-w-[1040px] mx-auto px-5">
+      <span class="text-[12px] font-semibold uppercase tracking-[0.1em] text-gold-deep">Community</span>
+      <h2 class="text-[28px] md:text-[34px] font-bold tracking-tight mt-2 mb-3.5">What teachers are saying</h2>
+      <div class="tdc-gallery tdc-gallery--below-arrows">
+        <div class="tdc-slider tdc-li-slider">
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-diksha-phagna.jpg" alt="Diksha Phagna's LinkedIn post about starting the PGCTL program with Suraasa"></div>
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-archana-gulati.jpg" alt="Archana Gulati's LinkedIn post about Suraasa TDC Session 2"></div>
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-nikit-garg.jpg" alt="Nikit Garg's LinkedIn post about joining the Teacher Development Center"></div>
+          <div class="tdc-slide tdc-li-slide"><img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/li-susmita-sengupta.jpg" alt="Susmita Sengupta's LinkedIn post about joining the PGCTL course orientation at Kunskapsskolan Gurgaon"></div>
+        </div>
+        <button class="tdc-arrow prev" onclick="tdcScroll(this,-1)" aria-label="Previous">‹</button>
+        <button class="tdc-arrow next" onclick="tdcScroll(this,1)" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section><!-- MID-PAGE CTA — node 993:5962 -->
+  <section style="background:#1e1608; padding:48px 0;">
+    <div class="wrap px200" style="display:flex; flex-direction:column; align-items:center; gap:15px; text-align:center;">
+      <div>
+        <p style="font-weight:700; color:#FFFFFF; font-size:20px; letter-spacing:-0.4px; margin:0 0 4px;">Ready to take the next step?</p>
+        <p style="font-weight:500; color:rgba(255,255,255,0.56); font-size:18px; margin:0;">Talk to an advisor and check your eligibility for Cohort 2.</p>
+      </div>
+      <button onclick="document.getElementById('tdc-form')?.scrollIntoView({behavior:'smooth'})" style="background:#f2d16a; border:0; border-radius:12px; min-height:44px; padding:0 24px; font-family:Inter; font-weight:600; font-size:16px; color:#0f172a; cursor:pointer; box-shadow:0px 1px 0.5px rgba(15,23,42,0.04),0px 4px 2px rgba(15,23,42,0.02);">Book a Call</button>
+    </div>
+  </section>
+
+  <!-- CAMPUS FACILITIES DETAIL — node 1086:6605 -->
+  <section style="padding-bottom:96px;">
+    <div style="position:relative;">
+      <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/campus-classroom-hd2.png" style="display:block; width:100%; height:auto;">
+      <img class="campus-gradient" src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/rectangle-gradient-3044.png" style="position:absolute; left:0; bottom:0; width:100%; height:102px; object-fit:cover;">
+    </div>
+    <div class="wrap px200" style="display:flex; flex-direction:column; gap:33px; padding-top:33px;">
+      <div>
+        <p style="font-weight:600; color:#b5811c; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; margin:0 0 16px;">Your campus</p>
+        <p style="font-weight:700; color:#0f2233; font-size:34px; letter-spacing:-0.85px; margin:0;">Kunskapsskolan Gurgaon, Sector 28.</p>
+      </div>
+      <!-- Real interactive Google Maps embed + location card, now with the real
+           Kunskapsskolan Gurgaon name/address. The redundant "In-person day / Session /
+           Cohort" tiles that used to sit above the map were removed per request. -->
+      <div class="map-wrapper">
+        <div class="map-container">
+          <iframe src="https://maps.google.com/maps?q=Site+No.+1122,+behind+Dt+Mega+Mall,+Block+A,+DLF+Phase+1,+Gurugram,+Haryana+122002&amp;z=15&amp;output=embed" width="100%" height="500" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="location-card">
+          <div class="school-block">
+            <div class="school-name">Kunskapsskolan, Gurgaon</div>
+            <div class="address">
+              <p>Site No. 1122, behind Dt Mega Mall</p>
+              <p>Block A, DLF Phase 1</p>
+              <p>Gurugram, Haryana 122002</p>
+            </div>
+          </div>
+          <div class="session-block">
+            <div class="session-day">
+              <span>In-Person Session Day</span>
+              <p>Second Saturday of every month</p>
+            </div>
+            <div class="info-row">
+              <div class="info-block">
+                <div class="info-item"><span>Session Duration</span><p>8 hours per session</p></div>
+                <div class="info-item"><span>Cohort Capacity</span><p>30 seats</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p style="font-weight:700; color:#0f172a; font-size:20px; letter-spacing:-0.4px; margin:0 0 24px;">The centre is fully equipped with</p>
+        <div class="fig-row facility-row" style="display:flex; gap:9px; align-items:center;">
+          <div class="facility-tile" style="background:#f8f7f5; border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:24px; justify-content:center; width:203px; flex-shrink:0;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/icon-desktop.svg" style="width:28px;height:28px;">
+            <p style="font-weight:600; color:#1e293b; font-size:14px; line-height:1.3; margin:0;">Dedicated classroom learning space</p>
+          </div>
+          <div class="facility-tile" style="background:#f8f7f5; border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:24px; justify-content:center; width:203px; flex-shrink:0;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/icon-projector.svg" style="width:28px;height:28px;">
+            <p style="font-weight:600; color:#1e293b; font-size:14px; line-height:1.3; margin:0;">Projector-enabled live session setup</p>
+          </div>
+          <div class="facility-tile" style="background:#f8f7f5; border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:24px; justify-content:center; width:203px; flex-shrink:0;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/icon-wifi.svg" style="width:28px;height:28px;">
+            <p style="font-weight:600; color:#1e293b; font-size:14px; line-height:1.3; margin:0;">High-speed internet connectivity</p>
+          </div>
+          <div class="facility-tile facility-fill" style="flex:1; position:relative; border-radius:12px; overflow:hidden; min-height:128px; display:flex; align-items:flex-end; padding:20px;">
+            <img src="https://pages.suraasa.com/hubfs/TDC/kunskapsskolan-assets/academic-support-new.png" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+            <p style="position:relative; font-weight:600; color:#0f172a; font-size:14px; line-height:1.3; margin:0; width:45%;">Academic<br>coordination<br>support on-site</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY & FINANCING — node 993:4736 -->
+  <section style="background:#f7efdd;">
+    <div class="wrap px200 fig-row" style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding-top:64px; padding-bottom:64px;">
+      <div>
+        <p style="font-weight:600; color:#b5811c; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; margin:0 0 8px;">ELIGIBILITY &amp; FINANCING</p>
+        <p style="font-weight:700; color:#0f2233; font-size:34px; letter-spacing:-0.85px; width:293px; max-width:100%; margin:0;">Simple to join. Flexible to fund.</p>
+      </div>
+      <div class="fig-row" style="display:flex; gap:12px; width:600px; max-width:100%;">
+        <div style="flex:1; background:#FFFFFF; border-radius:14px; padding:24px 28px;">
+          <p style="font-weight:700; color:#0f2233; font-size:20px; letter-spacing:-0.4px; margin:0 0 12px;">Built for working teachers.</p>
+          <p style="font-weight:400; color:#475569; font-size:14px; line-height:1.3; margin:0;">You qualify if you already hold a subject qualification and a recognised teaching qualification. To join, you speak with an advisor who confirms your eligibility and guides you through the next steps.</p>
+        </div>
+        <div style="flex:1; background:#FFFFFF; border-radius:14px; padding:24px 28px;">
+          <p style="font-weight:700; color:#0f2233; font-size:20px; letter-spacing:-0.4px; margin:0 0 12px;">Flexible ways to pay.</p>
+          <p style="font-weight:400; color:#475569; font-size:14px; line-height:1.3; margin:0;">No-cost EMI is available, and eligible teachers can receive the Educator Excellence Grant. Your advisor walks you through the full fee and options on your call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLLMENT — node 993:4749 -->
+  <section style="background:#1e1608; padding:96px 0;">
+    <div class="wrap px200" style="display:flex; flex-direction:column; align-items:center;">
+      <div style="width:434px; max-width:100%; display:flex; flex-direction:column; gap:52px; align-items:center;">
+        <div style="text-align:center;">
+          <p style="font-weight:600; color:#f9cf7c; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; margin:0 0 8px;">Enrollment</p>
+          <p style="font-weight:700; color:#FFFFFF; font-size:34px; letter-spacing:-0.68px; margin:0;">Three steps to your seat.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:9px; width:100%;">
+          <div style="background:#3b3321; border-radius:16px; padding:18px; display:flex; gap:14px; align-items:center;">
+            <span style="background:#f9cf7c; border-radius:9999px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#000; font-size:18px; flex-shrink:0;">1</span>
+            <p style="font-weight:500; color:#FFFFFF; font-size:18px; margin:0;">Talk to an advisor and confirm your fit.</p>
+          </div>
+          <div style="background:#3b3321; border-radius:16px; padding:18px; display:flex; gap:14px; align-items:center;">
+            <span style="background:#f9cf7c; border-radius:9999px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#000; font-size:18px; flex-shrink:0;">2</span>
+            <p style="font-weight:500; color:#FFFFFF; font-size:18px; margin:0;">Secure your seat with the registration fee.</p>
+          </div>
+          <div style="background:#3b3321; border-radius:16px; padding:18px; display:flex; gap:14px; align-items:center;">
+            <span style="background:#f9cf7c; border-radius:9999px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#000; font-size:18px; flex-shrink:0;">3</span>
+            <p style="font-weight:500; color:#FFFFFF; font-size:18px; margin:0;">Starts on 10 October 2026.</p>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:20px; align-items:center;">
+          <p style="font-weight:400; color:#FFFFFF; opacity:0.6; font-size:16px; text-align:center; width:312px; max-width:100%; margin:0;">30 seats, first come, first served. Admissions close 26 Sep 2026.</p>
+          <button onclick="document.getElementById('tdc-form')?.scrollIntoView({behavior:'smooth'})" style="background:#f8fafc; border:0; border-radius:12px; min-height:44px; padding:0 24px; font-family:Inter; font-weight:600; font-size:16px; color:#0f172a; cursor:pointer; box-shadow:0px 1px 0.5px rgba(15,23,42,0.04),0px 4px 2px rgba(15,23,42,0.02);">Talk to an Advisor</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — replaced with real TDC-specific tabbed/accordion FAQ content, per request
+       (previous version's content was about "KHDA certificates" / "6 courses", unrelated
+       to TDC — see prior conversation). CSS and the tab/accordion JS below were written
+       to match this markup, since only the HTML was supplied. -->
+  <section class="faq-section" style="background:#FFFFFF;">
+    <div class="wrap px200">
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+    <!-- =================== DESKTOP VERSION =================== -->
+    <div class="faq-wrapper">
+      <!-- Left Column: Category Tabs -->
+      <div class="faq-categories">
+
+          <div class="faq-category-tab active" data-tab="faq-0-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M0.999838 6.33398H11.4165M11.4165 6.33398L6.4165 1.33398M11.4165 6.33398L6.4165 11.334" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            About Suraasa, PgCTL, &amp; TDC Experience
+          </div>
+
+          <div class="faq-category-tab" data-tab="faq-0-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M0.999838 6.33398H11.4165M11.4165 6.33398L6.4165 1.33398M11.4165 6.33398L6.4165 11.334" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Eligibility &amp; Enrollment
+          </div>
+
+          <div class="faq-category-tab" data-tab="faq-0-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M0.999838 6.33398H11.4165M11.4165 6.33398L6.4165 1.33398M11.4165 6.33398L6.4165 11.334" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Learning, Support, &amp; Assessments
+          </div>
+
+          <div class="faq-category-tab" data-tab="faq-0-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M0.999838 6.33398H11.4165M11.4165 6.33398L6.4165 1.33398M11.4165 6.33398L6.4165 11.334" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Credentials &amp; Career Growth
+          </div>
+
+          <div class="faq-category-tab" data-tab="faq-0-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M0.999838 6.33398H11.4165M11.4165 6.33398L6.4165 1.33398M11.4165 6.33398L6.4165 11.334" stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Fees, Financing, &amp; Policies
+          </div>
+
+      </div>
+
+      <!-- Right Column: Accordions -->
+      <div class="faq-content">
+
+          <div class="faq-accordion-wrapper active" id="faq-0-0">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is a Teacher Development Centre (TDC)?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">The Teacher Development Centre (TDC) is a Suraasa teacher upskilling centre hosted at a school near you. Teachers from different schools come to a TDC to develop their pedagogy and mindset to join the ranks of the most successful teachers globally.<br>As a TDC participant, you will:<br>
+<ul>
+<li>Learn global pedagogy practices in live classes delivered virtually by teacher educators from the US, UK, UAE, and Lebanon.</li>
+<li>Gain hands-on experience with exclusive opportunities to teach classes at the premier school hosting your TDC.</li>
+<li>Earn highly sought-after international credentials upon completion of your program.</li>
+<li>Develop a digital portfolio of the skills you master in the program.</li>
+<li>Engage in group activities with your cohort and become a member of a lifelong community of like-minded, passionate teachers.</li>
+<li>Accelerate your career progression and unlock new professional advancement opportunities.</li>
+</ul></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Which Suraasa programs are offered at the TDC?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">Currently, the TDC hosts the Executive pathway of our flagship Professional Graduate Certificate in Teaching &amp; Learning (PgCTL). For years, the PgCTL has successfully upskilled teachers through a comprehensive online platform, and the TDC now brings this proven, internationally recognized curriculum into a blended, in-person environment.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How is learning at a TDC different from Suraasa’s standard online PgCTL?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">While the core curriculum and the prestigious credentials remain exactly the same as our successful online program, the TDC offers benefit from localized, face-to-face community engagement. This includes mandatory in-person collaborative sessions on the second Saturday of every month and exclusive opportunities to practice teaching physically at the premier school hosting your nearest TDC.</div>
+              </div>
+
+          </div>
+
+          <div class="faq-accordion-wrapper" id="faq-0-1">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Who can apply for the TDC program?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">To be eligible for the program, candidates must already hold both a subject qualification and a recognized teaching qualification.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the application process?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">There is no formal application or interview process. You can enroll directly by paying an initial registration fee of ₹20,000. If you want to understand more about why you should join the TDC or if you have any doubts, you can easily schedule a consultation call with our team before enrolling.</div>
+              </div>
+
+          </div>
+
+          <div class="faq-accordion-wrapper" id="faq-0-2">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How will I be evaluated or assessed during the program?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">To ensure that you are able to successfully learn and apply your new skills, your progress is measured through a mix of formative and practical assessments. These are designed to evaluate both your theoretical understanding and your real-world teaching application:<br>
+<ul>
+<li><strong>Self-Paced Assessments:</strong> Throughout your self-paced learning journey, you will complete multiple-choice question (MCQ) assessments. These occur at the beginning and end of each module, as well as at the end of each milestone within the modules, helping you actively track your progressive learning.</li>
+<li><strong>Live Assessments: </strong>Specific modules feature live assessments that will be open for defined windows of time. You will need to complete these MCQs within their designated timeframe, aiming for a minimum passing scope of 50%.</li>
+<li><strong>Skill Evidence Assignments:</strong> These are practical tasks such as classroom projects, case studies, and digital tasks that prove your ability to apply what you have learned. They are evaluated by trained professionals using specific rubrics.</li>
+</ul>
+At the end of the program, your final GPA is calculated based on a weighted average of these components. Because practical application is the core focus of the TDC, your Skill Evidence assignments make up the majority of your grade at 60%. Your Live Assessments and Self-Paced Milestones account for the remaining 20% each.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Will I have a dedicated mentor or support system?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">Yes. Before the course begins, you are assigned a dedicated PAL (Progress Advisor and Liaison) who serves as your main point of contact for academic, certification, and career-related questions. You will also have access to weekly guidance sessions to seek direct help from professors, alongside a dedicated IT Team for any technical or platform support.</div>
+              </div>
+
+          </div>
+
+          <div class="faq-accordion-wrapper" id="faq-0-3">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What certifications will I earn upon completion?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>Upon successful completion of the program, you will earn two highly recognized credentials:<br>The Professional Graduate Certificate in Teaching &amp; Learning (PgCTL).<br>The ATHE UK Level 6 Diploma in Teaching (regulated by UK OFQUAL).</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How will this program help my career progression?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>When you upskill at a TDC, you learn how the most successful teachers in the world operate. You will be equipped to teach significantly better wherever you are currently placed. This elevated level of classroom excellence naturally opens many doors for you, allowing you to confidently pursue new opportunities and career advancement wherever you choose to go next.</span>&nbsp;</div>
+              </div>
+
+          </div>
+
+          <div class="faq-accordion-wrapper" id="faq-0-4">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the cost of the program?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>The total fee for the PgCTL Executive program via the TDC pathway is ₹2,60,000 plus 18% GST. To enroll and secure your seat, you only need to pay the initial ₹20,000 registration fee.</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How does the EMI option work?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>We have partnered with leading Non-Banking Financial Companies (NBFCs) to offer our teachers education loans at low or no interest rates. Once you have paid your registration fee, our team will connect with you to discuss the specific EMI process and requirements for approval.</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Are there any scholarships available?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>Yes, we offer the Educator Excellence Grant, which provides a scholarship of up to ₹12,500 based on a review of your teaching profile.</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the refund policy?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer"><span>The initial registration fee is non-refundable. However, if you need to withdraw within the first 7 days of enrollment, 100% of the remaining fee paid will be refunded. If you withdraw between 7 and 15 days, 50% of the remaining fee paid will be refunded. No refunds are granted after 15 days from the date of enrollment. You can request a withdrawal by emailing care@suraasa.com.</span>&nbsp;</div>
+              </div>
+
+          </div>
+
+      </div>
+    </div>
+
+    <!-- =================== MOBILE VERSION =================== -->
+    <div class="faq-mobile-wrapper">
+
+        <div class="faq-category-mobile">
+          <button class="faq-category-toggle">
+            About Suraasa, PgCTL, &amp; TDC Experience
+            <span class="faq-category-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+            </span>
+          </button>
+
+          <div class="faq-category-content">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is a Teacher Development Centre (TDC)?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">The Teacher Development Centre (TDC) is a Suraasa teacher upskilling centre hosted at a school near you. Teachers from different schools come to a TDC to develop their pedagogy and mindset to join the ranks of the most successful teachers globally.<br>As a TDC participant, you will:<br>
+<ul>
+<li>Learn global pedagogy practices in live classes delivered virtually by teacher educators from the US, UK, UAE, and Lebanon.</li>
+<li>Gain hands-on experience with exclusive opportunities to teach classes at the premier school hosting your TDC.</li>
+<li>Earn highly sought-after international credentials upon completion of your program.</li>
+<li>Develop a digital portfolio of the skills you master in the program.</li>
+<li>Engage in group activities with your cohort and become a member of a lifelong community of like-minded, passionate teachers.</li>
+<li>Accelerate your career progression and unlock new professional advancement opportunities.</li>
+</ul></div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Which Suraasa programs are offered at the TDC?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">Currently, the TDC hosts the Executive pathway of our flagship Professional Graduate Certificate in Teaching &amp; Learning (PgCTL). For years, the PgCTL has successfully upskilled teachers through a comprehensive online platform, and the TDC now brings this proven, internationally recognized curriculum into a blended, in-person environment.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How is learning at a TDC different from Suraasa’s standard online PgCTL?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">While the core curriculum and the prestigious credentials remain exactly the same as our successful online program, the TDC offers benefit from localized, face-to-face community engagement. This includes mandatory in-person collaborative sessions on the second Saturday of every month and exclusive opportunities to practice teaching physically at the premier school hosting your nearest TDC.</div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="faq-category-mobile">
+          <button class="faq-category-toggle">
+            Eligibility &amp; Enrollment
+            <span class="faq-category-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+            </span>
+          </button>
+
+          <div class="faq-category-content">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Who can apply for the TDC program?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">To be eligible for the program, candidates must already hold both a subject qualification and a recognized teaching qualification.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the application process?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">There is no formal application or interview process. You can enroll directly by paying an initial registration fee of ₹20,000. If you want to understand more about why you should join the TDC or if you have any doubts, you can easily schedule a consultation call with our team before enrolling.</div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="faq-category-mobile">
+          <button class="faq-category-toggle">
+            Learning, Support, &amp; Assessments
+            <span class="faq-category-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+            </span>
+          </button>
+
+          <div class="faq-category-content">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How will I be evaluated or assessed during the program?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">To ensure that you are able to successfully learn and apply your new skills, your progress is measured through a mix of formative and practical assessments. These are designed to evaluate both your theoretical understanding and your real-world teaching application:<br>
+<ul>
+<li><strong>Self-Paced Assessments:</strong> Throughout your self-paced learning journey, you will complete multiple-choice question (MCQ) assessments. These occur at the beginning and end of each module, as well as at the end of each milestone within the modules, helping you actively track your progressive learning.</li>
+<li><strong>Live Assessments: </strong>Specific modules feature live assessments that will be open for defined windows of time. You will need to complete these MCQs within their designated timeframe, aiming for a minimum passing scope of 50%.</li>
+<li><strong>Skill Evidence Assignments:</strong> These are practical tasks such as classroom projects, case studies, and digital tasks that prove your ability to apply what you have learned. They are evaluated by trained professionals using specific rubrics.</li>
+</ul>
+At the end of the program, your final GPA is calculated based on a weighted average of these components. Because practical application is the core focus of the TDC, your Skill Evidence assignments make up the majority of your grade at 60%. Your Live Assessments and Self-Paced Milestones account for the remaining 20% each.</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Will I have a dedicated mentor or support system?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">Yes. Before the course begins, you are assigned a dedicated PAL (Progress Advisor and Liaison) who serves as your main point of contact for academic, certification, and career-related questions. You will also have access to weekly guidance sessions to seek direct help from professors, alongside a dedicated IT Team for any technical or platform support.</div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="faq-category-mobile">
+          <button class="faq-category-toggle">
+            Credentials &amp; Career Growth
+            <span class="faq-category-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+            </span>
+          </button>
+
+          <div class="faq-category-content">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What certifications will I earn upon completion?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>Upon successful completion of the program, you will earn two highly recognized credentials:<br>The Professional Graduate Certificate in Teaching &amp; Learning (PgCTL).<br>The ATHE UK Level 6 Diploma in Teaching (regulated by UK OFQUAL).</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How will this program help my career progression?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>When you upskill at a TDC, you learn how the most successful teachers in the world operate. You will be equipped to teach significantly better wherever you are currently placed. This elevated level of classroom excellence naturally opens many doors for you, allowing you to confidently pursue new opportunities and career advancement wherever you choose to go next.</span>&nbsp;</div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="faq-category-mobile">
+          <button class="faq-category-toggle">
+            Fees, Financing, &amp; Policies
+            <span class="faq-category-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+            </span>
+          </button>
+
+          <div class="faq-category-content">
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the cost of the program?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>The total fee for the PgCTL Executive program via the TDC pathway is ₹2,60,000 plus 18% GST. To enroll and secure your seat, you only need to pay the initial ₹20,000 registration fee.</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How does the EMI option work?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>We have partnered with leading Non-Banking Financial Companies (NBFCs) to offer our teachers education loans at low or no interest rates. Once you have paid your registration fee, our team will connect with you to discuss the specific EMI process and requirements for approval.</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Are there any scholarships available?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer">&nbsp;<span>Yes, we offer the Educator Excellence Grant, which provides a scholarship of up to ₹12,500 based on a review of your teaching profile.</span>&nbsp;</div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the refund policy?
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                      <path d="M5 7.83398L10 12.834L15 7.83398" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer"><span>The initial registration fee is non-refundable. However, if you need to withdraw within the first 7 days of enrollment, 100% of the remaining fee paid will be refunded. If you withdraw between 7 and 15 days, 50% of the remaining fee paid will be refunded. No refunds are granted after 15 days from the date of enrollment. You can request a withdrawal by emailing care@suraasa.com.</span>&nbsp;</div>
+              </div>
+
+          </div>
+        </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA — node 993:5316 -->
+  <section style="background:linear-gradient(to bottom, #1e1608, #14151b);">
+    <div class="wrap px200" style="display:flex; flex-direction:column; align-items:center; gap:34px; padding-top:64px; padding-bottom:64px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center; width:100%;">
+        <p style="font-weight:700; color:#FFFFFF; font-size:34px; letter-spacing:-0.85px; width:100%; max-width:463px; margin:0;">30 seats. One year. Two global qualifications.</p>
+        <p style="font-weight:500; color:rgba(255,255,255,0.6); font-size:18px; width:100%; max-width:463px; margin:0;">NCR's first international TDC starts 10 Oct 2026. 30 seats, first come, first served. Admissions close 26 Sep 2026.</p>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+        <button onclick="document.getElementById('tdc-form')?.scrollIntoView({behavior:'smooth'})" style="background:#f2d16a; border:0; border-radius:12px; min-height:44px; padding:0 24px; font-family:Inter; font-weight:600; font-size:16px; color:#0f172a; cursor:pointer; box-shadow:0px 1px 0.5px rgba(15,23,42,0.04),0px 4px 2px rgba(15,23,42,0.02);">Book a Call</button>
+        <button onclick="tdcOpenBrochure(event)" style="background:rgba(148,163,184,0.1); border:0; border-radius:12px; min-height:44px; padding:0 24px; font-family:Inter; font-weight:600; font-size:16px; color:#e2e8f0; cursor:pointer;">Download Brochure</button>
+      </div>
+    </div>
+
+
+  </script>
+  <link rel="modulepreload" crossorigin="" href="https://static.hsappstatic.net/cms-js-static/ex/js/react/v18/react-combined.mjs">
+  <script type="module" crossorigin="">
+    import { initConfigSingletonFromJSON, setupIslandHydration } from "https://static.hsappstatic.net/cms-js-static/ex/js/island-runtime/v1/island-runtime.mjs"
+    initConfigSingletonFromJSON(window.__hsEnvConfig)
+    setupIslandHydration();
+  </script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var form = document.getElementById('advisorForm');
+      var frame = document.getElementById('advisorFormFrame');
+      var message = document.getElementById('advisorFormMessage');
+      if (!form || !frame || !message) return;
+
+      var submitting = false;
+      form.addEventListener('submit', function(){
+        submitting = true;
+        message.style.display = 'none';
+      });
+
+      frame.addEventListener('load', function(){
+        if (!submitting) return;
+        submitting = false;
+        message.textContent = 'Thank you! Your details have been submitted successfully.';
+        message.style.display = 'block';
+        message.style.color = '#166534';
+        form.reset();
+      });
+    })();
+
+    function tdcOpenBrochure(e){
+      if(e) e.preventDefault();
+      var url = new URL(window.location.href);
+      url.searchParams.set('centre', '50621187412');
+      window.history.replaceState({}, '', url);
+      document.getElementById('tdc-brochure-modal').classList.add('active');
+    }
+    function tdcCloseBrochure(e){ if(e.target.id === 'tdc-brochure-modal' || e.target.classList.contains('tdc-form-modal__close')){ document.getElementById('tdc-brochure-modal').classList.remove('active'); } }
+
+    // Brochure form (data-form-id 1df41926-2756-44ba-ba22-4da1f15956c7) hidden field
+    // "Centre" needs to submit as Kunskapsskolan (internal value 50621187412). The
+    // developer embed doesn't reliably pick this up from the URL query string alone,
+    // so we set the field directly on the rendered form once it's ready.
+    window.addEventListener('message', function(event){
+      if (!event.data || event.data.type !== 'hsFormCallback') return;
+      if (event.data.eventName !== 'onFormReady') return;
+      var formRoot = document.getElementById(event.data.id) || document.querySelector('[data-form-id="1df41926-2756-44ba-ba22-4da1f15956c7"]');
+      if (!formRoot) return;
+      var hidden = formRoot.querySelector('input[name="centre"], input[name="Centre"]');
+      if (hidden) {
+        hidden.value = '50621187412';
+        hidden.dispatchEvent(new Event('input', { bubbles: true }));
+        hidden.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+    function tdcScroll(btn,dir){var t=btn.parentElement.querySelector('.tdc-slider');var s=t.querySelector('.tdc-slide');var w=s?s.getBoundingClientRect().width+12:320;t.scrollBy({left:dir*w,behavior:'smooth'});}
+    // Real video file found alongside the poster in the same GCS folder.
+    function tdcOpen(){
+      var overlay = document.createElement('div');
+      overlay.className = 'tdc-video-modal';
+      overlay.innerHTML = '<div class="tdc-video-modal__inner">' +
+        '<button class="tdc-video-modal__close" aria-label="Close video">&times;</button>' +
+        '<video src="https://storage.googleapis.com/global-suraasa-marketing-gcs/lp/kkp-lp-new/kkp-experience.mp4" controls autoplay playsinline></video>' +
+        '</div>';
+      overlay.addEventListener('click', function(e){
+        if (e.target === overlay || e.target.classList.contains('tdc-video-modal__close')) {
+          overlay.querySelector('video').pause();
+          overlay.remove();
+        }
+      });
+      document.body.appendChild(overlay);
+    }
+
+    // FAQ: desktop category tabs
+    document.querySelectorAll('.faq-category-tab').forEach(function(tab){
+      tab.addEventListener('click', function(){
+        document.querySelectorAll('.faq-category-tab').forEach(function(t){ t.classList.remove('active'); });
+        document.querySelectorAll('.faq-accordion-wrapper').forEach(function(w){ w.classList.remove('active'); });
+        tab.classList.add('active');
+        var target = document.getElementById(tab.getAttribute('data-tab'));
+        if (target) target.classList.add('active');
+      });
+    });
+
+    // FAQ: question accordions (desktop + mobile)
+    document.querySelectorAll('.faq-question').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btn.closest('.faq-item').classList.toggle('open');
+      });
+    });
+
+    // FAQ: mobile category accordions
+    document.querySelectorAll('.faq-category-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btn.closest('.faq-category-mobile').classList.toggle('open');
+      });
+    });
+  </script>
+</div><!-- /#tdc-lp -->
+  
+<form id="advisorForm"
+      action="https://script.google.com/macros/s/AKfycbyLdFwcqIaDxDivt5ybBoTK5fI-tTO6WMoV2URyS-OJXcx3s-cZf4hroD-SIprjM3ba/exec"
+      method="POST"
+      target="advisorFormFrame"
+      style="font-family:Inter,system-ui,sans-serif; margin:0; padding:0; border:0; background:none; color:#0f172a;">
+
+  <h2 style="font-family:Inter,system-ui,sans-serif; font-size:20px; line-height:1.3; margin:0 0 18px; color:#0f172a; font-weight:700;">
+    Talk to an Advisor
+  </h2>
+
+  <div style="display:flex; flex-direction:column; gap:14px;">
+
+    <div>
+      <label for="fullName"
+             style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">
+        Full Name
+      </label>
+
+      <input id="fullName"
+             name="fullName"
+             type="text"
+             required
+             autocomplete="name"
+             placeholder="Enter your full name"
+             style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+    </div>
+
+    <div>
+      <label for="email"
+             style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">
+        Email Address
+      </label>
+
+      <input id="email"
+             name="email"
+             type="email"
+             required
+             autocomplete="email"
+             placeholder="Enter your email address"
+             style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+    </div>
+
+    <div>
+      <label for="profession"
+             style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">
+        Current Profession
+      </label>
+
+      <input id="profession"
+             name="profession"
+             type="text"
+             required
+             autocomplete="organization-title"
+             placeholder="Enter your current profession"
+             style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+    </div>
+
+    <div>
+      <label for="qualification"
+             style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">
+        Highest Qualification
+      </label>
+
+      <input id="qualification"
+             name="qualification"
+             type="text"
+             required
+             placeholder="Enter your highest qualification"
+             style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+    </div>
+
+    <div>
+      <label for="phone"
+             style="display:block; font-size:14px; font-weight:600; color:#334155; margin:0 0 6px;">
+        Phone Number
+      </label>
+
+      <input id="phone"
+             name="phone"
+             type="tel"
+             required
+             autocomplete="tel"
+             inputmode="tel"
+             placeholder="Enter your phone number"
+             style="width:100%; min-height:46px; box-sizing:border-box; padding:12px 13px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:#0f172a; font-family:Inter,system-ui,sans-serif; font-size:14px; outline:none;">
+    </div>
+
+    <input type="hidden"
+           name="source"
+           value="Kunskapsskolan TDC Website">
+
+    <button id="advisorSubmitButton"
+            type="submit"
+            style="width:100%; min-height:48px; margin-top:2px; padding:0 20px; border:0; border-radius:10px; background:#0f172a; color:#FFFFFF; font-family:Inter,system-ui,sans-serif; font-size:15px; font-weight:600; cursor:pointer;">
+      Book a Call
+    </button>
+
+    <p id="advisorFormMessage"
+       style="display:none; margin:2px 0 0; font-size:13px; line-height:1.5; text-align:center;">
+    </p>
+
+  </div>
+</form>
+
+<iframe name="advisorFormFrame"
+        id="advisorFormFrame"
+        title="Form submission"
+        style="display:none;">
+</iframe>
 
 <script>
-    const modal = document.getElementById("advisorModal");
-    const openBtn = document.getElementById("openAdvisor");
-    const closeBtn = document.querySelector(".close-modal");
+(function () {
+  var form = document.getElementById('advisorForm');
+  var frame = document.getElementById('advisorFormFrame');
+  var message = document.getElementById('advisorFormMessage');
+  var submitButton = document.getElementById('advisorSubmitButton');
 
-    openBtn.onclick = () => modal.style.display = "block";
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+  if (!form || !frame || !message) return;
 
-    document.getElementById("advisorForm").onsubmit = (e) => {
-        e.preventDefault();
-        alert("Thank you! An advisor will contact you soon.");
-        modal.style.display = "none";
-    };
+  var submitting = false;
+
+  form.addEventListener('submit', function () {
+    submitting = true;
+
+    message.style.display = 'none';
+    message.textContent = '';
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+      submitButton.style.opacity = '0.7';
+      submitButton.style.cursor = 'not-allowed';
+    }
+  });
+
+  frame.addEventListener('load', function () {
+    if (!submitting) return;
+
+    submitting = false;
+
+    message.textContent = 'Thank you! Your details have been submitted successfully.';
+    message.style.display = 'block';
+    message.style.color = '#166534';
+
+    form.reset();
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Book a Call';
+      submitButton.style.opacity = '1';
+      submitButton.style.cursor = 'pointer';
+    }
+  });
+})();
 </script>
+    
 
 
 
-<!-- SECTION 2: ABOUT THIS TDC (REFINED 6-POINTER GRID) -->
-<section class="tdc-section-white">
-    <div class="sr-container">
-        
-        <div class="tdc-content_block">
-            <h2 class="tdc-heading">About This TDC</h2>
-            <div class="tdc-description">
-                The Suraasa Teacher Development Centre (TDC) at Kunskapsskolan Gurgaon is a high-impact "skills lab" where international pedagogy meets real-world Indian classroom practice.
-            </div>
-        </div>
-
-        <div class="tdc-grid">
-            <!-- Card 1: Global-Local Synergy -->
-            <div class="tdc-card">
-                <div class="tdc-card__image">
-                    <img src="https://pages.suraasa.com/hubfs/Image%20(3).png" alt="Global Pedagogy">
-                </div>
-                <div class="tdc-card__content">
-                    <span class="tdc-card_highlight">Global-Local Synergy:</span> Learn world-class pedagogy from international professors while practicing in a local Gurgaon classroom context.
-                </div>
-            </div>
-
-            <!-- Card 2: The Coach Model -->
-            <div class="tdc-card">
-                <div class="tdc-card__image">
-                    <img src="https://pages.suraasa.com/hubfs/Group%201000013491.png" alt="Coach Model">
-                </div>
-                <div class="tdc-card__content">
-                    <span class="tdc-card_highlight">The "Coach" Model:</span> Experience the famous Swedish KED philosophy firsthand, learning to coach students rather than just instructing them.
-                </div>
-            </div>
-
-            <!-- Card 3: Skills Mastery -->
-            <div class="tdc-card">
-                <div class="tdc-card__image">
-                    <img src="https://pages.suraasa.com/hubfs/Image%20(4).png" alt="Skill Mastery">
-                </div>
-                <div class="tdc-card__content">
-                    <span class="tdc-card_highlight">Tangible Skill Mastery:</span> Master 50 core pedagogical competencies through structured, in-person practice and immediate educator feedback.
-                </div>
-            </div>
-
-            <!-- Card 4: Networking -->
-            <div class="tdc-card">
-                <div class="tdc-card__image">
-                    <img src="https://pages.suraasa.com/hubfs/Image%20(5).png" alt="Networking">
-                </div>
-                <div class="tdc-card__content">
-                    <span class="tdc-card_highlight">Elite Networking:</span> Join a monthly collaborative cohort of the region's most ambitious educators and build a lifelong professional circle.
-                </div>
-            </div>
-
-            <!-- Card 5: Infrastructure -->
-            <div class="tdc-card">
-                <div class="tdc-card__image">
-                    <img src="https://pages.suraasa.com/hubfs/Image%20(6).png" alt="Premier Infrastructure">
-                </div>
-                <div class="tdc-card__content">
-                    <span class="tdc-card_highlight">Premier Infrastructure:</span> Train within Kunskapsskolan’s world-class campus, utilizing dedicated tech-enabled classroom learning spaces.
-                </div>
-            </div>
-
-            <!-- Card 6: Digital Evidence -->
-            <div class="tdc-card">
-                <div class="tdc-card__image">
-                    <img src="https://pages.suraasa.com/hubfs/Image%20(4).svg" alt="Digital Portfolio">
-                </div>
-                <div class="tdc-card__content">
-                    <span class="tdc-card_highlight">Verified Portfolios:</span> Build a digital portfolio that documents your physical teaching practice, providing tangible proof of your expertise.
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- SECTION 3: ABOUT VENUE & LOCATION (EXACT MATCH image_0e28d9.jpg) -->
-<section class="tdc-venue-section" style="background: #ffffff; padding: 100px 0; font-family: 'Inter', sans-serif;">
-    <div class="sr-container">
-        
-        <!-- Header Content -->
-        <div class="tdc-venue-header" style="max-width: 800px; margin-bottom: 50px;">
-            <small style="text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #87909e; display: block; margin-bottom: 20px; font-size: 11px;">About</small>
-            <h2 style="font-size: 32px; color: #212d3a; font-weight: 700; margin-bottom: 30px; line-height: 1.2;">Gyde and Kunskapsskolan Gurgaon</h2>
-            
-            <p style="margin-bottom: 25px; font-size: 15px; line-height: 1.6; color: #516383;">
-                Gyandarshan Eduventures (Gyde) has been reimagining K-12 education in India since 2010.
-            </p>
-            <p style="font-size: 15px; line-height: 1.6; color: #516383;">
-                In 2012, Gyde brought Sweden's Kunskapsskolan model to India through a joint venture with Kunskapsskolan AB, making this Gurgaon campus the first in India to run the KED Program. The model is built on personalized learning, individual goal-setting, and teachers who coach rather than instruct. Kunskapsskolan Gurgaon is the venue partner for the Suraasa Teacher Development Center hosted by Gyde.
-            </p>
-        </div>
-
-        <!-- Meta Grid -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 35px; margin-bottom: 80px; max-width: 500px; border-top: 1px solid #f0f1f3; padding-top: 40px;">
-            <div>
-                <small style="display: block; color: #87909e; margin-bottom: 8px; font-size: 12px;">Location</small>
-                <p style="color: #212d3a; font-weight: 600; font-size: 14px;">Sector 28, Gurugram, India</p>
-            </div>
-            <div>
-                <small style="display: block; color: #87909e; margin-bottom: 8px; font-size: 12px;">Established</small>
-                <p style="color: #212d3a; font-weight: 600; font-size: 14px;">2013</p>
-            </div>
-            <div>
-                <small style="display: block; color: #87909e; margin-bottom: 8px; font-size: 12px;">Board Affiliation</small>
-                <p style="color: #212d3a; font-weight: 600; font-size: 14px;">CBSE, IB</p>
-            </div>
-            <div>
-                <small style="display: block; color: #87909e; margin-bottom: 8px; font-size: 12px;">Grade Levels</small>
-                <p style="color: #d6b25e; font-weight: 700; font-size: 14px;">K-12</p>
-            </div>
-            <div style="grid-column: span 2;">
-                <small style="display: block; color: #87909e; margin-bottom: 8px; font-size: 12px;">Campus Type</small>
-                <p style="color: #212d3a; font-weight: 600; font-size: 14px;">Day School</p>
-            </div>
-        </div>
-
-        <!-- Map Component -->
-        <div class="tdc-map-container" style="position: relative; border-radius: 12px; overflow: hidden; height: 480px; border: 1px solid #e5e7ea;">
-            <!-- Map Background -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.741026046467!2d77.08412807630248!3d28.487349975745136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1923ec5f68c3%3A0x633198083a2f3f9e!2sKunskapsskolan%20Gurgaon!5e0!3m2!1sen!2sin!4v1712400000000!5m2!1sen!2sin" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-            <!-- Overlay Card (Matches Image Position and Content) -->
-            <div style="position: absolute; top: 40px; left: 40px; background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 340px; z-index: 10;">
-                <h4 style="font-size: 15px; color: #212d3a; margin-bottom: 8px; font-weight: 700;">Gyde and Kunskapsskolan Gurgaon</h4>
-                <p style="font-size: 13px; color: #87909e; margin-bottom: 25px; line-height: 1.4;">1122, Block A, DLF Phase-I, Sector 28, Gurugram, Haryana, India<br>Gurugram</p>
-                
-                <div style="margin-bottom: 20px;">
-                    <small style="display: block; font-size: 10px; text-transform: uppercase; color: #87909e; letter-spacing: 0.5px; margin-bottom: 4px;">In-Person Session Day</small>
-                    <p style="font-size: 12px; color: #212d3a; font-weight: 600;">Second Saturday of every month</p>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid #f0f1f3; padding-top: 20px;">
-                    <div>
-                        <small style="display: block; font-size: 10px; text-transform: uppercase; color: #87909e; letter-spacing: 0.5px; margin-bottom: 4px;">Session Duration</small>
-                        <p style="font-size: 12px; color: #212d3a; font-weight: 600;">8 hours per session</p>
-                    </div>
-                    <div>
-                        <small style="display: block; font-size: 10px; text-transform: uppercase; color: #87909e; letter-spacing: 0.5px; margin-bottom: 4px;">Cohort Capacity</small>
-                        <p style="font-size: 12px; color: #212d3a; font-weight: 600;">50 seats</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- SECTION 4: CENTRE FACILITIES -->
-<section class="centre-equipped" style="background: #ffffff; padding: 100px 0; border-top: 1px solid #f0f1f3;">
-    <div class="sr-container">
-
-        <div class="centre-heading" style="margin-bottom: 50px;">
-            <h2 style="font-size: 32px; color: #212d3a; font-weight: 700;">The centre is fully equipped with</h2>
-        </div>
-
-        <div class="centre-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-
-            <!-- LEFT COLUMN: FEATURE CARDS -->
-            <div class="feature-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                
-                <div class="feature-card" style="background: #f8f9fa; padding: 30px; border-radius: 12px; border: 1px solid #e5e7ea;">
-                    <div class="feature-icon" style="margin-bottom: 20px;">
-                        <img src="https://pages.suraasa.com/hubfs/ant-design_desktop-outlined.svg" alt="Desktop Icon" style="height: 32px;">
-                    </div>
-                    <div class="feature-text" style="font-size: 15px; font-weight: 600; color: #212d3a; line-height: 1.4;">
-                        Dedicated classroom learning space
-                    </div>
-                </div>
-
-                <div class="feature-card" style="background: #f8f9fa; padding: 30px; border-radius: 12px; border: 1px solid #e5e7ea;">
-                    <div class="feature-icon" style="margin-bottom: 20px;">
-                        <img src="https://pages.suraasa.com/hubfs/lucide_projector.svg" alt="Projector Icon" style="height: 32px;">
-                    </div>
-                    <div class="feature-text" style="font-size: 15px; font-weight: 600; color: #212d3a; line-height: 1.4;">
-                        Projector-enabled live session setup
-                    </div>
-                </div>
-
-                <div class="feature-card" style="background: #f8f9fa; padding: 30px; border-radius: 12px; border: 1px solid #e5e7ea;">
-                    <div class="feature-icon" style="margin-bottom: 20px;">
-                        <img src="https://pages.suraasa.com/hubfs/bi_wifi.svg" alt="WiFi Icon" style="height: 32px;">
-                    </div>
-                    <div class="feature-text" style="font-size: 15px; font-weight: 600; color: #212d3a; line-height: 1.4;">
-                        High-speed internet connectivity
-                    </div>
-                </div>
-
-                <div class="feature-card" style="background: #f8f9fa; padding: 30px; border-radius: 12px; border: 1px solid #e5e7ea;">
-                    <div class="feature-icon" style="margin-bottom: 20px;">
-                        <img src="https://pages.suraasa.com/hubfs/mage_dots-menu.svg" alt="Seating Icon" style="height: 32px;">
-                    </div>
-                    <div class="feature-text" style="font-size: 15px; font-weight: 600; color: #212d3a; line-height: 1.4;">
-                        Structured seating for cohort collaboration
-                    </div>
-                </div>
-                
-            </div>
-
-            <!-- RIGHT COLUMN: IMAGE CARDS -->
-            <div class="image-cards" style="display: flex; flex-direction: column; gap: 20px;">
-                
-                <div class="image-card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://pages.suraasa.com/hubfs/Frame208733051%20%282%29.jpeg'); background-size: cover; background-position: center; height: 215px; border-radius: 12px; display: flex; align-items: flex-end; padding: 30px; color: #fff;">
-                    <div class="image-card-content" style="font-size: 18px; font-weight: 700; line-height: 1.3;">
-                        Academic coordination support on-site
-                    </div>
-                </div>
-
-                <div class="image-card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://pages.suraasa.com/hubfs/Frame208733051%20%283%29.jpeg'); background-size: cover; background-position: center; height: 215px; border-radius: 12px; display: flex; align-items: flex-end; padding: 30px; color: #fff;">
-                    <div class="image-card-content" style="font-size: 18px; font-weight: 700; line-height: 1.3;">
-                        Access to Suraasa’s digital learning portal during sessions
-                    </div>
-                </div>
-                
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Responsive adjustment for Section 4 */
-    @media (max-width: 992px) {
-        .centre-grid {
-            grid-template-columns: 1fr !important;
-        }
-    }
-    @media (max-width: 600px) {
-        .feature-cards {
-            grid-template-columns: 1fr !important;
-        }
-    }
-</style>
-
-<!-- SECTION 5: PROGRAM OFFERED -->
-<section class="program-offered" style="background: #0a0a0b; padding: 100px 0; border-top: 1px solid var(--border);">
-    <div class="sr-container">
-        
-        <div class="program-offered_head" style="margin-bottom: 50px;">
-            <h2 style="font-size: 32px; color: #ffffff; font-weight: 700;">Program Offered</h2>
-        </div>
-
-        <div class="program-offered__wrapper" style="display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border);">
-            
-            <!-- Left Image/Badge -->
-            <div class="program-offered__image">
-                <img src="https://pages.suraasa.com/hubfs/Frame%202087330486.svg" alt="PgCTL Badge" style="width: 100%; max-width: 280px;">
-            </div>
-
-            <!-- Right Content -->
-            <div class="program-offered__content">
-                <div class="program-offered__block" style="margin-bottom: 30px;">
-                    <div class="program-heading" style="font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 15px; line-height: 1.3;">
-                        Professional Graduate Certificate in Teaching & Learning (PgCTL) – <span class="program-highlight" style="color: var(--gold);">Executive</span>
-                    </div>
-                    <div class="program-desc" style="font-size: 16px; color: var(--muted); line-height: 1.6;">
-                        The Professional Graduate Certificate in Teaching & Learning (PgCTL) is an internationally recognized teaching qualification to develop essential teaching skills aligned to global standards.
-                    </div>
-                </div>
-
-                <div class="program-meta-block" style="display: flex; gap: 40px; align-items: center; border-top: 1px solid var(--border); padding-top: 30px;">
-                    <div class="program-meta" style="display: flex; gap: 40px;">
-                        <div class="meta-item">
-                            <span class="meta-label" style="display: block; font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 5px;">Duration</span>
-                            <span class="meta-value" style="font-size: 18px; font-weight: 700; color: #ffffff;">12 Months</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label" style="display: block; font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: 1px; margin-bottom: 5px;">Format</span>
-                            <span class="meta-value" style="font-size: 18px; font-weight: 700; color: #ffffff;">Blended (Online + In-Person)</span>
-                        </div>
-                    </div>
-
-                    <!-- Button -->
-                    <div class="program-btn">
-                        <a class="program-cta open-callback-popup-program" id="openAdvisorProgram" style="background: var(--gold); color: #000; padding: 12px 25px; border-radius: 8px; font-weight: 700; text-decoration: none; cursor: pointer; display: inline-block;">
-                            Talk to an Advisor
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Responsive adjustment for Program Offered */
-    @media (max-width: 992px) {
-        .program-offered__wrapper {
-            grid-template-columns: 1fr !important;
-            text-align: center;
-        }
-        .program-offered__image {
-            margin: 0 auto;
-        }
-        .program-meta-block {
-            flex-direction: column !important;
-            gap: 25px !important;
-        }
-        .program-meta {
-            justify-content: center;
-        }
-    }
-</style>
-
-<script>
-    // Link the new button to the existing advisor modal logic
-    document.getElementById("openAdvisorProgram").onclick = () => {
-        document.getElementById("advisorModal").style.display = "block";
-    };
 </script>
-
-<!-- REFINED SECTIONS 6 & 7 (EXACT MATCH image_0dbfa1.png - NO CTA) -->
-<section class="kh-credentials-combined" style="background: #1a150e; padding: 100px 0; font-family: 'Inter', sans-serif;">
-    <div class="sr-container">
-        
-        <!-- SECTION 6: KEY HIGHLIGHTS -->
-        <div class="kh-heading" style="margin-bottom: 40px;">
-            <h2 style="font-size: 20px; color: #ffffff; font-weight: 700;">Key Highlights</h2>
-        </div>
-
-        <div class="kh-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 100px;">
-            
-            <!-- Card 1 -->
-            <div class="kh-card" style="background: #251f15; padding: 40px 25px; border-radius: 8px; height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
-                <img src="https://pages.suraasa.com/hubfs/tabler_stack-2.svg" alt="Stack" width="24" style="filter: brightness(0) saturate(100%) invert(86%) sepia(16%) hue-rotate(346deg) brightness(96%) contrast(88%);">
-                <p style="font-size: 13px; font-weight: 500; color: #ffffff; line-height: 1.5;">Structured learning pathway covering 50 core pedagogical skills</p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="kh-card" style="background: #251f15; padding: 40px 25px; border-radius: 8px; height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
-                <img src="https://pages.suraasa.com/hubfs/group.svg" alt="Group" width="24" style="filter: brightness(0) saturate(100%) invert(86%) sepia(16%) hue-rotate(346deg) brightness(96%) contrast(88%);">
-                <p style="font-size: 13px; font-weight: 500; color: #ffffff; line-height: 1.5;">Monthly in-person collaborative session</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="kh-card" style="background: #251f15; padding: 40px 25px; border-radius: 8px; height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
-                <img src="https://pages.suraasa.com/hubfs/user-square-alt-1.svg" alt="User" width="24" style="filter: brightness(0) saturate(100%) invert(86%) sepia(16%) hue-rotate(346deg) brightness(96%) contrast(88%);">
-                <p style="font-size: 13px; font-weight: 500; color: #ffffff; line-height: 1.5;">Live classes by international professors</p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="kh-card" style="background: #251f15; padding: 40px 25px; border-radius: 8px; height: 180px; display: flex; flex-direction: column; justify-content: space-between;">
-                <img src="https://pages.suraasa.com/hubfs/open-book.svg" alt="Book" width="24" style="filter: brightness(0) saturate(100%) invert(86%) sepia(16%) hue-rotate(346deg) brightness(96%) contrast(88%);">
-                <p style="font-size: 13px; font-weight: 500; color: #ffffff; line-height: 1.5;">Teaching practice opportunity</p>
-            </div>
-
-        </div>
-
-        <!-- SECTION 7: CREDENTIALS EARNED -->
-        <div class="credentials-wrapper" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start;">
-            
-            <div class="credentials-text">
-                <h2 style="font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 20px;">Credentials Earned</h2>
-                <p style="font-size: 14px; color: #a1a1aa; line-height: 1.6; max-width: 320px;">
-                    Upon completing the program, receive the Professional Graduate Certificate in Teaching & Learning (PgCTL), showcasing your expertise in effective teaching.
-                </p>
-            </div>
-
-            <div class="credentials-visuals" style="display: flex; gap: 20px; justify-content: flex-end;">
-                <!-- PgCTL Certificate -->
-                <div style="text-align: left;">
-                    <img src="https://pages.suraasa.com/hubfs/image%20(6).svg" alt="PgCTL" style="width: 280px; border-radius: 4px; display: block; margin-bottom: 10px;">
-                    <span style="color: #a1a1aa; font-size: 11px; font-weight: 600;">PgCTL</span>
-                </div>
-                <!-- ATHE Certificate -->
-                <div style="text-align: left;">
-                    <img src="https://pages.suraasa.com/hubfs/ATHE%20certificates-min.svg" alt="ATHE" style="width: 260px; border-radius: 4px; display: block; margin-bottom: 10px;">
-                    <span style="color: #a1a1aa; font-size: 11px; font-weight: 600;">ATHE</span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- SECTION 8 & 9: ENROLLMENT & QUESTIONS (Dark Theme as per Image) -->
-<section class="enrollment-questions-wrap" style="background: #1a150e; padding: 100px 0; font-family: 'Inter', sans-serif;">
-    <div class="sr-container">
-        
-        <!-- SECTION 8: HOW ENROLLMENT WORKS -->
-        <div class="enrollment-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 120px;">
-            <div class="enrollment-left">
-                <h2 style="font-size: 36px; color: #ffffff; font-weight: 700; margin-bottom: 40px; line-height: 1.2;">How Enrollment<br>Works</h2>
-                <button class="btn-enroll" style="background: #ffffff; color: #000; padding: 14px 45px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; font-size: 16px;">Enroll Now</button>
-            </div>
-
-            <div class="enrollment-steps-timeline" style="position: relative; padding-left: 40px;">
-                <!-- Vertical Line -->
-                <div style="position: absolute; left: 19px; top: 20px; bottom: 40px; width: 1px; background: rgba(214, 178, 94, 0.3);"></div>
-                
-                <div class="step-item" style="display: flex; gap: 25px; margin-bottom: 45px; position: relative;">
-                    <div style="width: 40px; height: 40px; background: #d6b25e; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; z-index: 2;">1</div>
-                    <p style="color: #ffffff; font-size: 18px; font-weight: 500; padding-top: 8px;">Pay ₹20,000 registration fee to secure your seat</p>
-                </div>
-                <div class="step-item" style="display: flex; gap: 25px; margin-bottom: 45px; position: relative;">
-                    <div style="width: 40px; height: 40px; background: #d6b25e; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; z-index: 2;">2</div>
-                    <p style="color: #ffffff; font-size: 18px; font-weight: 500; padding-top: 8px;">Complete admission formalities</p>
-                </div>
-                <div class="step-item" style="display: flex; gap: 25px; position: relative;">
-                    <div style="width: 40px; height: 40px; background: #d6b25e; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; z-index: 2;">3</div>
-                    <p style="color: #ffffff; font-size: 18px; font-weight: 500; padding-top: 8px;">Begin your blended learning journey</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- SECTION 9: HAVE QUESTIONS -->
-        <div class="questions-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 60px;">
-            <div style="display: flex; gap: 25px; align-items: center;">
-                <div style="width: 60px; height: 60px; background: #251f15; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                    <img src="https://pages.suraasa.com/hubfs/Frame%202087330397.png" alt="?" width="30">
-                </div>
-                <div>
-                    <h3 style="color: #ffffff; font-size: 24px; font-weight: 700; margin-bottom: 5px;">Have Questions?</h3>
-                    <p style="color: #a1a1aa; font-size: 15px;">Talk to a Suraasa advisor to get clarity on your needs, eligibility, and program details.</p>
-                </div>
-            </div>
-            <button class="btn-talk" onclick="document.getElementById('advisorModal').style.display='block'" style="background: #251f15; color: #ffffff; border: 1px solid rgba(255,255,255,0.1); padding: 12px 25px; border-radius: 8px; font-weight: 600; cursor: pointer;">Talk to an Advisor</button>
-        </div>
-    </div>
-</section>
-
-<!-- SECTION 10: FAQ (Light Theme as per Image) -->
-<section class="faq-section-refined" style="background: #ffffff; padding: 100px 0; color: #0f172a;">
-    <div class="sr-container">
-        <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 60px;">Frequently Asked<br>Questions</h2>
-        
-        <div class="faq-layout" style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px;">
-            <!-- Category Tabs -->
-            <div class="faq-tabs">
-                <div class="faq-tab active" data-target="about" style="padding: 15px 20px; background: #f1f5f9; border-radius: 8px; font-weight: 600; margin-bottom: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                    About Suraasa, PgCTL, & TDC Experience <span style="font-size: 18px;">→</span>
-                </div>
-                <div class="faq-tab" style="padding: 15px 20px; font-weight: 600; margin-bottom: 10px; cursor: pointer; color: #64748b;">Eligibility & Enrollment</div>
-                <div class="faq-tab" style="padding: 15px 20px; font-weight: 600; margin-bottom: 10px; cursor: pointer; color: #64748b;">Learning, Support, & Assessments</div>
-                <div class="faq-tab" style="padding: 15px 20px; font-weight: 600; margin-bottom: 10px; cursor: pointer; color: #64748b;">Credentials & Career Growth</div>
-                <div class="faq-tab" style="padding: 15px 20px; font-weight: 600; margin-bottom: 10px; cursor: pointer; color: #64748b;">Fees, Financing, & Policies</div>
-            </div>
-
-            <!-- Accordion Content -->
-            <div class="faq-accordion">
-                <div style="border-bottom: 1px solid #e2e8f0; padding: 20px 0; cursor: pointer;">
-                    <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 16px;">What is a Teacher Development Centre (TDC)? <span>⌵</span></div>
-                </div>
-                <div style="border-bottom: 1px solid #e2e8f0; padding: 20px 0; cursor: pointer;">
-                    <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 16px;">Which Suraasa programs are offered at the TDC? <span>⌵</span></div>
-                </div>
-                <div style="border-bottom: 1px solid #e2e8f0; padding: 20px 0; cursor: pointer;">
-                    <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 16px;">How is learning at a TDC different from Suraasa’s standard online PgCTL? <span>⌵</span></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SECTION 11: CAPACITY BANNER -->
-        <div class="capacity-banner-final" style="margin-top: 100px; background: #f8fafc; border-radius: 16px; overflow: hidden; display: flex; align-items: center; border: 1px solid #f1f5f9;">
-            <div style="background: #efead6; padding: 30px 40px; text-align: center; min-width: 180px;">
-                <small style="color: #8c8166; text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 1px;">Cohort Capacity</small>
-                <div style="font-size: 42px; font-weight: 800; color: #4d452d; line-height: 1;">50 <span style="font-size: 14px; font-weight: 600; display: block; margin-top: 5px;">Seats Only</span></div>
-            </div>
-            <div style="padding: 0 40px; flex-grow: 1;">
-                <h3 style="font-size: 22px; font-weight: 700; color: #1e293b;">Seats Are Limited for the Upcoming Cohort</h3>
-            </div>
-            <div style="padding: 0 40px; display: flex; gap: 15px;">
-                <button class="btn-enroll" style="background: #0f172a; color: #ffffff; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 700; cursor: pointer;">Enroll Now</button>
-                <button class="btn-talk" onclick="document.getElementById('advisorModal').style.display='block'" style="background: transparent; color: #1e293b; border: 1px solid #cbd5e1; padding: 12px 20px; border-radius: 8px; font-weight: 600; cursor: pointer;">Talk to an Advisor</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    @media (max-width: 992px) {
-        .enrollment-grid, .faq-layout, .capacity-banner-final {
-            grid-template-columns: 1fr !important;
-            flex-direction: column !important;
-        }
-        .questions-bar {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-            gap: 30px !important;
-        }
-        .capacity-banner-final div {
-            width: 100% !important;
-            text-align: center !important;
-            padding: 20px !important;
-        }
-        .capacity-banner-final div:last-child {
-            justify-content: center !important;
-        }
-    }
-</style>
-
-</body>
-</html>
+</body></html>
